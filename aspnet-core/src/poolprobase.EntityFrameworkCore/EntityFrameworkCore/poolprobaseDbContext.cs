@@ -3,6 +3,7 @@ using poolprobase.Authorization.Roles;
 using poolprobase.Authorization.Users;
 using poolprobase.MultiTenancy;
 using Microsoft.EntityFrameworkCore;
+using poolprobase.Web;
 
 namespace poolprobase.EntityFrameworkCore
 {
@@ -13,7 +14,12 @@ namespace poolprobase.EntityFrameworkCore
         public poolprobaseDbContext(DbContextOptions<poolprobaseDbContext> options)
             : base(options)
         {
-
         }
+
+        //for CustomerController
+        public DbSet<Customer> Customers { get; set; }
+        public DbSet<WorkOrder> WorkOrders { get; set; }
+        public DbSet<LineItem> LineItems { get; set; }
+        public DbSet<ServiceTech> ServiceTechs { get; set; }
     }
 }

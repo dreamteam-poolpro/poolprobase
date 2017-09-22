@@ -14,6 +14,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using poolprobase.Web.Data;
+using Microsoft.EntityFrameworkCore;
 
 #if FEATURE_SIGNALR
 using Owin;
@@ -34,6 +36,15 @@ namespace poolprobase.Web.Startup
 
         public IServiceProvider ConfigureServices(IServiceCollection services)
         {
+
+            //register CustomerContext
+            //his is the normal mvc way of doing things but it can't be done this way using this template, the dbcontext is
+            //defined in the entity framework core project, not sure where it's registered though
+            /*
+            services.AddDbContext<CustomerContext>(options =>
+                options.UseSqlServer(_appConfiguration.GetConnectionString("Default")));
+            */
+
             //MVC
             services.AddMvc(options =>
             {
