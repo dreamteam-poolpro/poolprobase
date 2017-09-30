@@ -1,0 +1,15 @@
+C:\Users\AJ Rogers\Downloads\poolprobase-master\poolprobase-master\aspnet-core\src\poolprobase.EntityFrameworkCore\obj\Debug\netcoreapp2.0\poolprobase.EntityFrameworkCore.csprojResolveAssemblyReference.cache
+C:\Users\AJ Rogers\Downloads\poolprobase-master\poolprobase-master\aspnet-core\src\poolprobase.EntityFrameworkCore\obj\Debug\netcoreapp2.0\poolprobase.EntityFrameworkCore.csproj.poolprobase.EntityFrameworkCore.dll.config
+C:\Users\AJ Rogers\Downloads\poolprobase-master\poolprobase-master\aspnet-core\src\poolprobase.EntityFrameworkCore\obj\Debug\netcoreapp2.0\poolprobase.EntityFrameworkCore.csproj.CoreCompileInputs.cache
+C:\Users\AJ Rogers\Downloads\poolprobase-master\poolprobase-master\aspnet-core\src\poolprobase.EntityFrameworkCore\obj\Debug\netcoreapp2.0\poolprobase.EntityFrameworkCore.AssemblyInfoInputs.cache
+C:\Users\AJ Rogers\Downloads\poolprobase-master\poolprobase-master\aspnet-core\src\poolprobase.EntityFrameworkCore\obj\Debug\netcoreapp2.0\poolprobase.EntityFrameworkCore.AssemblyInfo.cs
+C:\Users\AJ Rogers\Downloads\poolprobase-master\poolprobase-master\aspnet-core\src\poolprobase.EntityFrameworkCore\bin\Debug\netcoreapp2.0\poolprobase.EntityFrameworkCore.dll.config
+C:\Users\AJ Rogers\Downloads\poolprobase-master\poolprobase-master\aspnet-core\src\poolprobase.EntityFrameworkCore\bin\Debug\netcoreapp2.0\poolprobase.EntityFrameworkCore.deps.json
+C:\Users\AJ Rogers\Downloads\poolprobase-master\poolprobase-master\aspnet-core\src\poolprobase.EntityFrameworkCore\bin\Debug\netcoreapp2.0\poolprobase.EntityFrameworkCore.runtimeconfig.json
+C:\Users\AJ Rogers\Downloads\poolprobase-master\poolprobase-master\aspnet-core\src\poolprobase.EntityFrameworkCore\bin\Debug\netcoreapp2.0\poolprobase.EntityFrameworkCore.runtimeconfig.dev.json
+C:\Users\AJ Rogers\Downloads\poolprobase-master\poolprobase-master\aspnet-core\src\poolprobase.EntityFrameworkCore\bin\Debug\netcoreapp2.0\poolprobase.EntityFrameworkCore.dll
+C:\Users\AJ Rogers\Downloads\poolprobase-master\poolprobase-master\aspnet-core\src\poolprobase.EntityFrameworkCore\bin\Debug\netcoreapp2.0\poolprobase.EntityFrameworkCore.pdb
+C:\Users\AJ Rogers\Downloads\poolprobase-master\poolprobase-master\aspnet-core\src\poolprobase.EntityFrameworkCore\bin\Debug\netcoreapp2.0\poolprobase.Core.dll
+C:\Users\AJ Rogers\Downloads\poolprobase-master\poolprobase-master\aspnet-core\src\poolprobase.EntityFrameworkCore\bin\Debug\netcoreapp2.0\poolprobase.Core.pdb
+C:\Users\AJ Rogers\Downloads\poolprobase-master\poolprobase-master\aspnet-core\src\poolprobase.EntityFrameworkCore\obj\Debug\netcoreapp2.0\poolprobase.EntityFrameworkCore.dll
+C:\Users\AJ Rogers\Downloads\poolprobase-master\poolprobase-master\aspnet-core\src\poolprobase.EntityFrameworkCore\obj\Debug\netcoreapp2.0\poolprobase.EntityFrameworkCore.pdb
