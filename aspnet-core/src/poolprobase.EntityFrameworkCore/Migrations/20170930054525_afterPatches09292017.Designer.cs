@@ -15,9 +15,10 @@ using System;
 namespace poolprobase.Migrations
 {
     [DbContext(typeof(poolprobaseDbContext))]
-    partial class poolprobaseDbContextModelSnapshot : ModelSnapshot
+    [Migration("20170930054525_afterPatches09292017")]
+    partial class afterPatches09292017
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

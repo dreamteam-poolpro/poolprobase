@@ -16,10 +16,5 @@ namespace poolprobase.EntityFrameworkCore
         {
         }
 
-        //for CustomerController
-        public DbSet<Customer> Customers { get; set; }
-        public DbSet<WorkOrder> WorkOrders { get; set; }
-        public DbSet<LineItem> LineItems { get; set; }
-        public DbSet<ServiceTech> ServiceTechs { get; set; }
     }
 }
