@@ -8,35 +8,29 @@ using Microsoft.EntityFrameworkCore;
 using poolprobase.Web.Data;
 using poolprobase.Web.Models.Customer;
 using poolprobase.Controllers;
-using poolprobase.Users;
 using Abp.AspNetCore.Mvc.Authorization;
 using poolprobase.Authorization;
 
 namespace poolprobase.Web.Mvc.Controllers
 {
+
     [AbpMvcAuthorize(PermissionNames.Pages_Users)]
-    public class CustomersController : poolprobaseControllerBase
+    public class ServiceTechsController : poolprobaseControllerBase
     {
-        private readonly IUserAppService _userAppService;
         private readonly CustomerContext _context;
 
-        public CustomersController(IUserAppService userAppService)
-        {
-            _userAppService = userAppService;
-        }
-
-        public CustomersController(CustomerContext context)
+        public ServiceTechsController(CustomerContext context)
         {
             _context = context;
         }
 
-        // GET: Customers
+        // GET: ServiceTechs
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Customers.ToListAsync());
+            return View(await _context.ServiceTechs.ToListAsync());
         }
 
-        // GET: Customers/Details/5
+        // GET: ServiceTechs/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -44,39 +38,39 @@ namespace poolprobase.Web.Mvc.Controllers
                 return NotFound();
             }
 
-            var customer = await _context.Customers
-                .SingleOrDefaultAsync(m => m.CustomerID == id);
-            if (customer == null)
+            var serviceTech = await _context.ServiceTechs
+                .SingleOrDefaultAsync(m => m.ServiceTechID == id);
+            if (serviceTech == null)
             {
                 return NotFound();
             }
 
-            return View(customer);
+            return View(serviceTech);
         }
 
-        // GET: Customers/Create
+        // GET: ServiceTechs/Create
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: Customers/Create
+        // POST: ServiceTechs/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("CustomerID,FirstName,LastName,Address,PhoneNumber,EmailAddress")] Customer customer)
+        public async Task<IActionResult> Create([Bind("ServiceTechID,FirstName,LastName")] ServiceTech serviceTech)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(customer);
+                _context.Add(serviceTech);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(customer);
+            return View(serviceTech);
         }
 
-        // GET: Customers/Edit/5
+        // GET: ServiceTechs/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -84,22 +78,22 @@ namespace poolprobase.Web.Mvc.Controllers
                 return NotFound();
             }
 
-            var customer = await _context.Customers.SingleOrDefaultAsync(m => m.CustomerID == id);
-            if (customer == null)
+            var serviceTech = await _context.ServiceTechs.SingleOrDefaultAsync(m => m.ServiceTechID == id);
+            if (serviceTech == null)
             {
                 return NotFound();
             }
-            return View(customer);
+            return View(serviceTech);
         }
 
-        // POST: Customers/Edit/5
+        // POST: ServiceTechs/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("CustomerID,FirstName,LastName,Address,PhoneNumber,EmailAddress")] Customer customer)
+        public async Task<IActionResult> Edit(int id, [Bind("ServiceTechID,FirstName,LastName")] ServiceTech serviceTech)
         {
-            if (id != customer.CustomerID)
+            if (id != serviceTech.ServiceTechID)
             {
                 return NotFound();
             }
@@ -108,12 +102,12 @@ namespace poolprobase.Web.Mvc.Controllers
             {
                 try
                 {
-                    _context.Update(customer);
+                    _context.Update(serviceTech);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!CustomerExists(customer.CustomerID))
+                    if (!ServiceTechExists(serviceTech.ServiceTechID))
                     {
                         return NotFound();
                     }
@@ -124,10 +118,10 @@ namespace poolprobase.Web.Mvc.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            return View(customer);
+            return View(serviceTech);
         }
 
-        // GET: Customers/Delete/5
+        // GET: ServiceTechs/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -135,30 +129,47 @@ namespace poolprobase.Web.Mvc.Controllers
                 return NotFound();
             }
 
-            var customer = await _context.Customers
-                .SingleOrDefaultAsync(m => m.CustomerID == id);
-            if (customer == null)
+            var serviceTech = await _context.ServiceTechs
+                .SingleOrDefaultAsync(m => m.ServiceTechID == id);
+            if (serviceTech == null)
             {
                 return NotFound();
             }
 
-            return View(customer);
+            return View(serviceTech);
         }
 
-        // POST: Customers/Delete/5
+        // POST: ServiceTechs/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var customer = await _context.Customers.SingleOrDefaultAsync(m => m.CustomerID == id);
-            _context.Customers.Remove(customer);
+            var serviceTech = await _context.ServiceTechs.SingleOrDefaultAsync(m => m.ServiceTechID == id);
+            _context.ServiceTechs.Remove(serviceTech);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
-        private bool CustomerExists(int id)
+        private bool ServiceTechExists(int id)
         {
-            return _context.Customers.Any(e => e.CustomerID == id);
+            return _context.ServiceTechs.Any(e => e.ServiceTechID == id);
+        }
+
+        public async Task<ActionResult> EditTechModal(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var serviceTech = await _context.ServiceTechs
+                .SingleOrDefaultAsync(m => m.ServiceTechID == id);
+            if (serviceTech == null)
+            {
+                return NotFound();
+            }
+
+            return View("_EditTechModal", serviceTech);
         }
     }
 }

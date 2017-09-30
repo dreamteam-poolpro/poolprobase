@@ -17,6 +17,6 @@ namespace poolprobase.Web.Data
         public DbSet<WorkOrder> WorkOrders { get; set; }
         public DbSet<LineItem> LineItems { get; set; }
         public DbSet<ServiceTech> ServiceTechs { get; set; }
-
+        public object Customer { get; internal set; }
     }
 }

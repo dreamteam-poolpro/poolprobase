@@ -40,10 +40,10 @@ namespace poolprobase.Web.Startup
             //register CustomerContext
             //his is the normal mvc way of doing things but it can't be done this way using this template, the dbcontext is
             //defined in the entity framework core project, not sure where it's registered though
-            /*
+            
             services.AddDbContext<CustomerContext>(options =>
                 options.UseSqlServer(_appConfiguration.GetConnectionString("Default")));
-            */
+            
 
             //MVC
             services.AddMvc(options =>

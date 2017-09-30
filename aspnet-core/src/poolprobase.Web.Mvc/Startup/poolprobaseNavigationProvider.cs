@@ -30,9 +30,17 @@ namespace poolprobase.Web.Startup
                     )
                 ).AddItem(
                     new MenuItemDefinition(
-                        PageNames.Users,
-                        L("Users"),
-                        url: "Users",
+                        PageNames.Customers,
+                        L("Customers"),
+                        url: "Customers",
+                        icon: "business",
+                        requiredPermissionName: PermissionNames.Pages_Users
+                    )
+                ).AddItem(
+                new MenuItemDefinition(
+                        PageNames.ServiceTechs,
+                        L("ServiceTechs"),
+                        url: "ServiceTechs",
                         icon: "people",
                         requiredPermissionName: PermissionNames.Pages_Users
                     )

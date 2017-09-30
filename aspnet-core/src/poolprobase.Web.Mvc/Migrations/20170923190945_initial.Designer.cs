@@ -11,7 +11,7 @@ using System;
 namespace poolprobase.Web.Migrations
 {
     [DbContext(typeof(CustomerContext))]
-    [Migration("20170924162950_initial")]
+    [Migration("20170923190945_initial")]
     partial class initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

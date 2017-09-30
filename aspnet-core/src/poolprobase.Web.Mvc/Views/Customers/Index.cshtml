@@ -1,10 +1,13 @@
-﻿@model IEnumerable<poolprobase.Web.Models.Customer.Customer>
-
+﻿@using poolprobase.Web.Startup
+@model IEnumerable<poolprobase.Web.Models.Customer.Customer>
 @{
-    ViewData["Title"] = "Index";
+    ViewBag.CurrentPageName = PageNames.Customers; //The menu item will be active for this page.
+}
+@{
+    ViewData["Title"] = "Customers";
 }
 
-<h2>Index</h2>
+<h2>Customers</h2>
 
 <p>
     <a asp-action="Create">Create New</a>

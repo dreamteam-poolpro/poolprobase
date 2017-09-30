@@ -1,9 +1,16 @@
-﻿using Microsoft.AspNetCore;
+﻿using Abp.Dependency;
+using Castle.Windsor.MsDependencyInjection;
+using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using poolprobase.Identity;
 using poolprobase.Web.Data;
 using System;
+using System.ComponentModel;
+using Castle.MicroKernel.Registration;
+
 
 namespace poolprobase.Web.Startup
 {
@@ -12,21 +19,7 @@ namespace poolprobase.Web.Startup
         public static void Main(string[] args)
         {
             var host = BuildWebHost(args);
-            using (var scope = host.Services.CreateScope())
-            {
-                var services = scope.ServiceProvider;
-                try
-                {
-                    var context = services.GetRequiredService<CustomerContext>();
-                    DbInitializer.Initialize(context);
-                }
-                catch (Exception ex)
-                {
-                    var logger = services.GetRequiredService<ILogger<Program>>();
-                    logger.LogError(ex, "An error occurred while seeding the database.");
-                }
-            }
-            host.Run();
+                host.Run();
         }
 
         public static IWebHost BuildWebHost(string[] args)
@@ -35,5 +28,25 @@ namespace poolprobase.Web.Startup
                 .UseStartup<Startup>()
                 .Build();
         }
-    }
+
+        /*public static void Register(IIocManager iocManager)
+        {
+            var services = new ServiceCollection();
+
+            IdentityRegistrar.Register(services);
+
+            // services.AddEntityFrameworkInMemoryDatabase();
+
+            var serviceProvider = WindsorRegistrationHelper.CreateServiceProvider(iocManager.IocContainer, services);
+
+            var builder = new DbContextOptionsBuilder<CustomerContext>();
+            // builder.UseInMemoryDatabase(Guid.NewGuid().ToString()).UseInternalServiceProvider(serviceProvider);
+
+            iocManager.IocContainer.Register(
+                System.ComponentModel.Component
+                    .For<DbContextOptions<CustomerContext>>()
+                    .Instance(builder.Options)
+                    .LifestyleSingleton()
+            );*/
+        }
 }
