@@ -17,5 +17,13 @@ namespace poolprobase.Web.Models.Customer
         //data
         public List<LineItem> LineItems { get; set; }
 
+        //needs to have a state enum,
+        //something like this:
+
+        //public enum State
+        //{
+        //    Assigned, InProgress, Completed, Invoiced
+        //}
+
     }
 }
