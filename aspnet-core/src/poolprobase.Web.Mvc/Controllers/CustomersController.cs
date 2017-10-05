@@ -17,7 +17,13 @@ namespace poolprobase.Web.Mvc.Controllers
     [AbpMvcAuthorize(PermissionNames.Pages_Users)]
     public class CustomersController : poolprobaseControllerBase
     {
+        private readonly IUserAppService _userAppService;
         private readonly CustomerContext _context;
+
+        public CustomersController(IUserAppService userAppService)
+        {
+            _userAppService = userAppService;
+        }
 
         public CustomersController(CustomerContext context)
         {

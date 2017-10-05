@@ -4,12 +4,6 @@
     ViewBag.CurrentPageName = PageNames.ServiceTechs; //The menu item will be active for this page.
     ViewData["Title"] = "Service Techs";
 }
-    <style>
-        #FirstName, #LastName{
-            color: black;
-        }
-
-    </style>
 
     <div class="row clearfix">
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -30,9 +24,7 @@
                     </ul>
                 </div>
                 <div class="body table-responsive">
-                    <!-- this table holds the list of service techs-->
                     <table class="table">
-                        <!--the tables headings-->
                         <thead>
                             <tr>
                                 <th>First Name</th>
@@ -40,9 +32,7 @@
                                 <th>@L("Actions")</th>
                             </tr>
                         </thead>
-                        
                         <tbody>
-                            <!-- this loop creates a tr for each tech in the list-->
                             @foreach (var item in Model)
                             {
                                 <tr>
