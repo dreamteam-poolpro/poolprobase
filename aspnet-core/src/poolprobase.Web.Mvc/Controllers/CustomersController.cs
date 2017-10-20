@@ -1,14 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using poolprobase.Web.Data;
 using poolprobase.Web.Models.Customer;
 using poolprobase.Controllers;
-using poolprobase.Users;
 using Abp.AspNetCore.Mvc.Authorization;
 using poolprobase.Authorization;
 
@@ -37,14 +33,18 @@ namespace poolprobase.Web.Mvc.Controllers
             {
                 return NotFound();
             }
-
-            var customer = await _context.Customers
+                                               
+           var customer = await _context.Customers
+                .Include(w => w.CU_WorkOrders)
+                    .ThenInclude(s => s.WO_ServiceTech)
+                .Include(w => w.CU_WorkOrders)
+                    
                 .SingleOrDefaultAsync(m => m.CustomerID == id);
+                
             if (customer == null)
             {
                 return NotFound();
             }
-
             return View(customer);
         }
 

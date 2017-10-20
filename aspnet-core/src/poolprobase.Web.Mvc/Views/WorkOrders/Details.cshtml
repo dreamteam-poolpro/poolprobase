@@ -1,0 +1,126 @@
+﻿@model poolprobase.Web.Models.Customer.WorkOrder
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div class="row clearfix">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="card">
+
+            <div class="header">
+                <h2>
+                    Customers
+                </h2>
+                <ul class="header-dropdown m-r--5">
+                    <li class="dropdown">
+                        <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            <i class="material-icons">more_vert</i>
+                        </a>
+                        <ul class="dropdown-menu pull-right">
+                            <li><a id="RefreshButton" href="javascript:void(0);" class="waves-effect waves-block"><i class="material-icons">refresh</i>Refresh</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.WO_Customer)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.WO_Customer.FirstName)
+                    @Html.DisplayFor(model => model.WO_Customer.LastName)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.WO_ServiceTech)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.WO_ServiceTech.FirstName)
+                    @Html.DisplayFor(model => model.WO_ServiceTech.LastName)
+                </dd>
+            </dl>
+
+            <table>
+                <!-- to display associated line items-->
+                <tr>
+                    <th>
+                        Line Item ID
+                    </th>
+                    <th>
+                        Description
+                    </th>
+                    <th>
+                        Quantity
+                    </th>
+                    <th>
+                        Units
+                    </th>
+                    <th>
+                        Unit Cost
+                    </th>
+                    <th>
+                        Total Cost
+                    </th>
+                </tr>
+                @foreach (var item in Model.WO_LineItems)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.LineItemID)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Description)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Quantity)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Units)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.UnitCost)
+                        </td>
+                        <td>
+                            line item cost goes here
+                        </td>
+                    </tr>
+
+                }
+                <!-- to add a line item to a work order -->
+                <tr>
+                    <td>
+                        <!-- empty space for id to auto genereate-->
+
+                    </td>
+                    <td>
+                        <!-- description input-->
+
+                        <input type="text" />
+                    </td>
+                    <td>
+                        <!-- Quatity input-->
+                        <input type="text" />
+                    </td>
+                    <td>
+                        <!-- units input-->
+                    </td>
+                    <td>
+                        <!-- unit cost input-->
+                        <input type="text" />
+                    </td>
+                    <td>
+                        <!-- submit button-->
+                        <button>Add Line Item</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div>
+            <a asp-action="Edit" asp-route-id="@Model.WorkOrderID">Edit</a> |
+            <a asp-action="Index">Back to List</a>
+        </div>
+    </div>
+    </div>
+</div>

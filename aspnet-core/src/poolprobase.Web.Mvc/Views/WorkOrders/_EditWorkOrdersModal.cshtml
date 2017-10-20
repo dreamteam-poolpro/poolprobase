@@ -1,0 +1,74 @@
+﻿
+
+@*@using poolprobase.Web.Models.Common.Modals
+@model poolprobase.Web.Models.Customer.WorkOrder
+@{
+    Layout = null;
+}
+
+@Html.Partial("~/Views/Shared/Modals/_ModalHeader.cshtml", new ModalHeaderViewModel("Edit Customer"))
+
+<!-- class type makes it a modal-->
+<div class="modal-body">
+    <form name="RoleEditForm" role="form" novalidate class="form-validation">
+        <input id="id" type="hidden" name="Id" value="@Model.WorkOrderID" />
+
+        <!-- work order id -->
+        <div class="row clearfix">
+            <div class="col-sm-12">
+                <div class="form-group form-float">
+                    <div class="form-line">
+                        <input id="rolename" type="text" name="Name" value="" required maxlength="32" minlength="2" class="validate form-control">
+                        <label for="rolename" class="form-label">Work Order Id</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row clearfix">
+            <div class="col-sm-12">
+                <div class="form-group form-float">
+                    <div class="form-line">
+                        <input id="displayname" type="text" name="DisplayName" value="" required maxlength="32" minlength="2" class="validate form-control">
+                        <label for="displayname" class="form-label">Last Name</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row clearfix">
+            <div class="col-sm-12">
+                <div class="form-group form-float">
+                    <div class="form-line">
+                        <input id="address" type="text" name="address" value="@Model.Address" required maxlength="32" minlength="2" class="validate form-control">
+                        <label for="address" class="form-label">Address</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row clearfix">
+            <div class="col-sm-12">
+                <div class="form-group form-float">
+                    <div class="form-line">
+                        <input id="phoneNumber" type="tel" name="phoneNumber" value="@Model.PhoneNumber" required maxlength="32" minlength="2" class="validate form-control">
+                        <label for="phoneNumber" class="form-label">Phone Number</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row clearfix">
+            <div class="col-sm-12">
+                <div class="form-group form-float">
+                    <div class="form-line">
+                        <input id="emailAddress" type="email" name="emailAddress" value="@Model.EmailAddress" required maxlength="32" minlength="2" class="validate form-control">
+                        <label for="emailAddress" class="form-label">Email Address</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+@Html.Partial("~/Views/Shared/Modals/_ModalFooterWithSaveAndCancel.cshtml")
+
+
+<script src="~/view-resources/Views/Customers/_EditCustomerModal.js" asp-append-version="true"></script>*@

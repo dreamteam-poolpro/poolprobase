@@ -5,23 +5,28 @@ using System.Threading.Tasks;
 
 namespace poolprobase.Web.Models.Customer
 {
+    
+    public enum Status
+    {
+        Assigned, InProgress, Completed, Invoiced, Paid
+    }
+
     public class WorkOrder
     {
-             //primary key
+       //primary key
        public int WorkOrderID { get; set; }
 
        //foreign key
        public int CustomerID { get; set; }
        public int ServiceTechID { get; set; }
 
-       //data
-       public Customer Customer { get; set; }
-       public ServiceTech ServiceTech { get; set; }
-       public List<LineItem> LineItems { get; set; }
-       //public enum Status
-       //{
-       //    Assigned, InProgress, Completed, Invoiced, Paid
-       //}
+       //navigation properties
+       public Customer WO_Customer { get; set; }
+       public ServiceTech WO_ServiceTech { get; set; }
+       public List<LineItem> WO_LineItems { get; set; }
+
+        //properties
+        public Status WO_Status { get; set; } = Status.Assigned;
 
     }
 }

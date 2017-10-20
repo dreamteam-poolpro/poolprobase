@@ -122,11 +122,23 @@ $.AdminBSB.leftSideBar = {
                 railBorderRadius: configs.scrollRailBorderRadius
             });
 
-            //Scroll active menu item when page load, if option set = true
-            if ($.AdminBSB.options.leftSideBar.scrollActiveItemWhenPageLoad) {
-                var activeItemOffsetTop = $('.menu .list li.active')[0].offsetTop
-                if (activeItemOffsetTop > 150) $el.slimscroll({ scrollTo: activeItemOffsetTop + 'px' });
-            }
+            ////Scroll active menu item when page load, if option set = true
+            //if ($.AdminBSB.options.leftSideBar.scrollActiveItemWhenPageLoad) {
+
+            //    //begin original - edited with help from the nice people on stack overflow, supposed to allow it to deal
+            //    //with views that don't have their own menus
+            //    //var activeItemOffsetTop = $('.menu .list li.active')[0].offsetTop;
+            //    //if (activeItemOffsetTop > 150) $el.slimscroll({ scrollTo: activeItemOffsetTop + 'px' });
+            //    //end original
+
+            //    //begin edit
+            //    var $activeItem = $('.menu .list li.active')[0];
+            //    if ($activeItem.length) {
+            //        var activeItemOffsetTop = $activeItem.offsetTop;
+            //        if (activeItemOffsetTop > 150) $el.slimscroll({ scrollTo: activeItemOffsetTop + 'px' });
+            //    //end edit
+            //    }
+            //}
         }
     },
     checkStatuForResize: function (firstTime) {

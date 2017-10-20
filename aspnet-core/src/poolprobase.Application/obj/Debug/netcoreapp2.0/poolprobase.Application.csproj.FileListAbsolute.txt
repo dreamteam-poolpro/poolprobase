@@ -1,0 +1,33 @@
+C:\Users\AJ Rogers\Downloads\poolprobase-master\poolprobase-master\aspnet-core\src\poolprobase.Application\bin\Debug\netcoreapp2.0\poolprobase.Application.deps.json
+C:\Users\AJ Rogers\Downloads\poolprobase-master\poolprobase-master\aspnet-core\src\poolprobase.Application\bin\Debug\netcoreapp2.0\poolprobase.Application.dll
+C:\Users\AJ Rogers\Downloads\poolprobase-master\poolprobase-master\aspnet-core\src\poolprobase.Application\bin\Debug\netcoreapp2.0\poolprobase.Application.pdb
+C:\Users\AJ Rogers\Downloads\poolprobase-master\poolprobase-master\aspnet-core\src\poolprobase.Application\bin\Debug\netcoreapp2.0\poolprobase.Core.dll
+C:\Users\AJ Rogers\Downloads\poolprobase-master\poolprobase-master\aspnet-core\src\poolprobase.Application\bin\Debug\netcoreapp2.0\poolprobase.Core.pdb
+C:\Users\AJ Rogers\Downloads\poolprobase-master\poolprobase-master\aspnet-core\src\poolprobase.Application\obj\Debug\netcoreapp2.0\poolprobase.Application.csprojResolveAssemblyReference.cache
+C:\Users\AJ Rogers\Downloads\poolprobase-master\poolprobase-master\aspnet-core\src\poolprobase.Application\obj\Debug\netcoreapp2.0\poolprobase.Application.csproj.CoreCompileInputs.cache
+C:\Users\AJ Rogers\Downloads\poolprobase-master\poolprobase-master\aspnet-core\src\poolprobase.Application\obj\Debug\netcoreapp2.0\poolprobase.Application.AssemblyInfoInputs.cache
+C:\Users\AJ Rogers\Downloads\poolprobase-master\poolprobase-master\aspnet-core\src\poolprobase.Application\obj\Debug\netcoreapp2.0\poolprobase.Application.AssemblyInfo.cs
+C:\Users\AJ Rogers\Downloads\poolprobase-master\poolprobase-master\aspnet-core\src\poolprobase.Application\obj\Debug\netcoreapp2.0\poolprobase.Application.dll
+C:\Users\AJ Rogers\Downloads\poolprobase-master\poolprobase-master\aspnet-core\src\poolprobase.Application\obj\Debug\netcoreapp2.0\poolprobase.Application.pdb
+C:\Users\Joey\Desktop\poolprobase-master\aspnet-core\src\poolprobase.Application\bin\Debug\netcoreapp2.0\poolprobase.Application.deps.json
+C:\Users\Joey\Desktop\poolprobase-master\aspnet-core\src\poolprobase.Application\bin\Debug\netcoreapp2.0\poolprobase.Application.dll
+C:\Users\Joey\Desktop\poolprobase-master\aspnet-core\src\poolprobase.Application\bin\Debug\netcoreapp2.0\poolprobase.Application.pdb
+C:\Users\Joey\Desktop\poolprobase-master\aspnet-core\src\poolprobase.Application\bin\Debug\netcoreapp2.0\poolprobase.Core.dll
+C:\Users\Joey\Desktop\poolprobase-master\aspnet-core\src\poolprobase.Application\bin\Debug\netcoreapp2.0\poolprobase.Core.pdb
+C:\Users\Joey\Desktop\poolprobase-master\aspnet-core\src\poolprobase.Application\obj\Debug\netcoreapp2.0\poolprobase.Application.csprojResolveAssemblyReference.cache
+C:\Users\Joey\Desktop\poolprobase-master\aspnet-core\src\poolprobase.Application\obj\Debug\netcoreapp2.0\poolprobase.Application.csproj.CoreCompileInputs.cache
+C:\Users\Joey\Desktop\poolprobase-master\aspnet-core\src\poolprobase.Application\obj\Debug\netcoreapp2.0\poolprobase.Application.AssemblyInfoInputs.cache
+C:\Users\Joey\Desktop\poolprobase-master\aspnet-core\src\poolprobase.Application\obj\Debug\netcoreapp2.0\poolprobase.Application.AssemblyInfo.cs
+C:\Users\Joey\Desktop\poolprobase-master\aspnet-core\src\poolprobase.Application\obj\Debug\netcoreapp2.0\poolprobase.Application.dll
+C:\Users\Joey\Desktop\poolprobase-master\aspnet-core\src\poolprobase.Application\obj\Debug\netcoreapp2.0\poolprobase.Application.pdb
+C:\Users\Joey\Desktop\poolprobase-customerbroken\aspnet-core\src\poolprobase.Application\bin\Debug\netcoreapp2.0\poolprobase.Application.deps.json
+C:\Users\Joey\Desktop\poolprobase-customerbroken\aspnet-core\src\poolprobase.Application\bin\Debug\netcoreapp2.0\poolprobase.Application.dll
+C:\Users\Joey\Desktop\poolprobase-customerbroken\aspnet-core\src\poolprobase.Application\bin\Debug\netcoreapp2.0\poolprobase.Application.pdb
+C:\Users\Joey\Desktop\poolprobase-customerbroken\aspnet-core\src\poolprobase.Application\bin\Debug\netcoreapp2.0\poolprobase.Core.dll
+C:\Users\Joey\Desktop\poolprobase-customerbroken\aspnet-core\src\poolprobase.Application\bin\Debug\netcoreapp2.0\poolprobase.Core.pdb
+C:\Users\Joey\Desktop\poolprobase-customerbroken\aspnet-core\src\poolprobase.Application\obj\Debug\netcoreapp2.0\poolprobase.Application.csprojResolveAssemblyReference.cache
+C:\Users\Joey\Desktop\poolprobase-customerbroken\aspnet-core\src\poolprobase.Application\obj\Debug\netcoreapp2.0\poolprobase.Application.csproj.CoreCompileInputs.cache
+C:\Users\Joey\Desktop\poolprobase-customerbroken\aspnet-core\src\poolprobase.Application\obj\Debug\netcoreapp2.0\poolprobase.Application.AssemblyInfoInputs.cache
+C:\Users\Joey\Desktop\poolprobase-customerbroken\aspnet-core\src\poolprobase.Application\obj\Debug\netcoreapp2.0\poolprobase.Application.AssemblyInfo.cs
+C:\Users\Joey\Desktop\poolprobase-customerbroken\aspnet-core\src\poolprobase.Application\obj\Debug\netcoreapp2.0\poolprobase.Application.dll
+C:\Users\Joey\Desktop\poolprobase-customerbroken\aspnet-core\src\poolprobase.Application\obj\Debug\netcoreapp2.0\poolprobase.Application.pdb

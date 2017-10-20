@@ -61,6 +61,7 @@
                                     <ul class="dropdown-menu pull-right">
                                         <li><a href="#" class="waves-effect waves-block edit-role" data-role-id="@item.CustomerID" data-toggle="modal" data-target="#RoleEditModal"><i class="material-icons">edit</i>@L("Edit")</a></li>
                                         <li><a href="#" class="waves-effect waves-block delete-role" data-role-id="@item.CustomerID" data-role-name="@item.FirstName"><i class="material-icons">delete_sweep</i>@L("Delete")</a></li>
+                                        <li><a class="waves-effect waves-block details-role" asp-action="Details" asp-route-id="@item.CustomerID">Details</a></li>
                                     </ul>
                                 </td>
                             </tr>
@@ -74,6 +75,7 @@
         </div>
     </div>
 </div>
+<!-- customer create modal -->
 <div class="modal fade" id="CustomerCreateModal" tabindex="-1" role="dialog" aria-labelledby="CustomerCreateModalLabel" data-backdrop="static">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -147,10 +149,12 @@
         </div>
     </div>
 </div>
+<!-- makes it pop up a modal-->
 <div class="modal fade" id="RoleEditModal" tabindex="-1" role="dialog" aria-labelledby="RoleEditModalLabel" data-backdrop="static">
     <div class="modal-dialog" role="document">
+        <!-- class type tells is to load the partial view as a modal -->
         <div class="modal-content">
-
+            <!-- the partial view _awoifjqwero loads here-->
         </div>
     </div>
 </div>

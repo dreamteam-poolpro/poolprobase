@@ -16,7 +16,9 @@ namespace poolprobase.Web.Models.Customer
         // data
         public string FirstName { get; set; }
         public string LastName { get; set; }
-        public List<WorkOrder> WorkOrders { get; set; }
+
+        //navigation properties
+        public List<WorkOrder> CU_WorkOrders { get; set; }
         
     }
 }

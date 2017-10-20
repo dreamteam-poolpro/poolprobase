@@ -20,5 +20,8 @@ namespace poolprobase.Web.Models.Customer
         public double UnitCost { get; set; }
         public int Quantity { get; set; }
 
+        //navigation properties
+        
+
     }
 }

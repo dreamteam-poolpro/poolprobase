@@ -6,6 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage;
 using Microsoft.EntityFrameworkCore.Storage.Internal;
 using poolprobase.Web.Data;
+using poolprobase.Web.Models.Customer;
 using System;
 
 namespace poolprobase.Web.Migrations
@@ -87,6 +88,8 @@ namespace poolprobase.Web.Migrations
 
                     b.Property<int>("ServiceTechID");
 
+                    b.Property<int>("WO_Status");
+
                     b.HasKey("WorkOrderID");
 
                     b.HasIndex("CustomerID");
@@ -99,19 +102,19 @@ namespace poolprobase.Web.Migrations
             modelBuilder.Entity("poolprobase.Web.Models.Customer.LineItem", b =>
                 {
                     b.HasOne("poolprobase.Web.Models.Customer.WorkOrder")
-                        .WithMany("LineItems")
+                        .WithMany("WO_LineItems")
                         .HasForeignKey("WorkOrderID");
                 });
 
             modelBuilder.Entity("poolprobase.Web.Models.Customer.WorkOrder", b =>
                 {
-                    b.HasOne("poolprobase.Web.Models.Customer.Customer", "Customer")
-                        .WithMany("WorkOrders")
+                    b.HasOne("poolprobase.Web.Models.Customer.Customer", "WO_Customer")
+                        .WithMany("CU_WorkOrders")
                         .HasForeignKey("CustomerID")
                         .OnDelete(DeleteBehavior.Cascade);
 
-                    b.HasOne("poolprobase.Web.Models.Customer.ServiceTech", "ServiceTech")
-                        .WithMany("WorkOrders")
+                    b.HasOne("poolprobase.Web.Models.Customer.ServiceTech", "WO_ServiceTech")
+                        .WithMany("CU_WorkOrders")
                         .HasForeignKey("ServiceTechID")
                         .OnDelete(DeleteBehavior.Cascade);
                 });

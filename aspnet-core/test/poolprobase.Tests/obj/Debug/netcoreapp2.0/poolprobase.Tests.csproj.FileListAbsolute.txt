@@ -1,0 +1,63 @@
+C:\Users\AJ Rogers\Downloads\poolprobase-master\poolprobase-master\aspnet-core\test\poolprobase.Tests\obj\Debug\netcoreapp2.0\poolprobase.Tests.csprojResolveAssemblyReference.cache
+C:\Users\AJ Rogers\Downloads\poolprobase-master\poolprobase-master\aspnet-core\test\poolprobase.Tests\obj\Debug\netcoreapp2.0\poolprobase.Tests.csproj.CoreCompileInputs.cache
+C:\Users\AJ Rogers\Downloads\poolprobase-master\poolprobase-master\aspnet-core\test\poolprobase.Tests\obj\Debug\netcoreapp2.0\poolprobase.Tests.AssemblyInfoInputs.cache
+C:\Users\AJ Rogers\Downloads\poolprobase-master\poolprobase-master\aspnet-core\test\poolprobase.Tests\obj\Debug\netcoreapp2.0\poolprobase.Tests.AssemblyInfo.cs
+C:\Users\AJ Rogers\Downloads\poolprobase-master\poolprobase-master\aspnet-core\test\poolprobase.Tests\bin\Debug\netcoreapp2.0\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+C:\Users\AJ Rogers\Downloads\poolprobase-master\poolprobase-master\aspnet-core\test\poolprobase.Tests\bin\Debug\netcoreapp2.0\xunit.runner.utility.netstandard15.dll
+C:\Users\AJ Rogers\Downloads\poolprobase-master\poolprobase-master\aspnet-core\test\poolprobase.Tests\bin\Debug\netcoreapp2.0\xunit.runner.reporters.netstandard15.dll
+C:\Users\AJ Rogers\Downloads\poolprobase-master\poolprobase-master\aspnet-core\test\poolprobase.Tests\bin\Debug\netcoreapp2.0\poolprobase.Tests.deps.json
+C:\Users\AJ Rogers\Downloads\poolprobase-master\poolprobase-master\aspnet-core\test\poolprobase.Tests\bin\Debug\netcoreapp2.0\poolprobase.Tests.runtimeconfig.json
+C:\Users\AJ Rogers\Downloads\poolprobase-master\poolprobase-master\aspnet-core\test\poolprobase.Tests\bin\Debug\netcoreapp2.0\poolprobase.Tests.runtimeconfig.dev.json
+C:\Users\AJ Rogers\Downloads\poolprobase-master\poolprobase-master\aspnet-core\test\poolprobase.Tests\bin\Debug\netcoreapp2.0\poolprobase.Tests.dll
+C:\Users\AJ Rogers\Downloads\poolprobase-master\poolprobase-master\aspnet-core\test\poolprobase.Tests\bin\Debug\netcoreapp2.0\poolprobase.Tests.pdb
+C:\Users\AJ Rogers\Downloads\poolprobase-master\poolprobase-master\aspnet-core\test\poolprobase.Tests\bin\Debug\netcoreapp2.0\poolprobase.Application.dll
+C:\Users\AJ Rogers\Downloads\poolprobase-master\poolprobase-master\aspnet-core\test\poolprobase.Tests\bin\Debug\netcoreapp2.0\poolprobase.Core.dll
+C:\Users\AJ Rogers\Downloads\poolprobase-master\poolprobase-master\aspnet-core\test\poolprobase.Tests\bin\Debug\netcoreapp2.0\poolprobase.EntityFrameworkCore.dll
+C:\Users\AJ Rogers\Downloads\poolprobase-master\poolprobase-master\aspnet-core\test\poolprobase.Tests\bin\Debug\netcoreapp2.0\poolprobase.Application.pdb
+C:\Users\AJ Rogers\Downloads\poolprobase-master\poolprobase-master\aspnet-core\test\poolprobase.Tests\bin\Debug\netcoreapp2.0\poolprobase.EntityFrameworkCore.pdb
+C:\Users\AJ Rogers\Downloads\poolprobase-master\poolprobase-master\aspnet-core\test\poolprobase.Tests\bin\Debug\netcoreapp2.0\poolprobase.EntityFrameworkCore.dll.config
+C:\Users\AJ Rogers\Downloads\poolprobase-master\poolprobase-master\aspnet-core\test\poolprobase.Tests\bin\Debug\netcoreapp2.0\poolprobase.Core.pdb
+C:\Users\AJ Rogers\Downloads\poolprobase-master\poolprobase-master\aspnet-core\test\poolprobase.Tests\obj\Debug\netcoreapp2.0\poolprobase.Tests.dll
+C:\Users\AJ Rogers\Downloads\poolprobase-master\poolprobase-master\aspnet-core\test\poolprobase.Tests\obj\Debug\netcoreapp2.0\poolprobase.Tests.pdb
+C:\Users\Joey\Desktop\poolprobase-master\aspnet-core\test\poolprobase.Tests\bin\Debug\netcoreapp2.0\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+C:\Users\Joey\Desktop\poolprobase-master\aspnet-core\test\poolprobase.Tests\bin\Debug\netcoreapp2.0\xunit.runner.utility.netstandard15.dll
+C:\Users\Joey\Desktop\poolprobase-master\aspnet-core\test\poolprobase.Tests\bin\Debug\netcoreapp2.0\xunit.runner.reporters.netstandard15.dll
+C:\Users\Joey\Desktop\poolprobase-master\aspnet-core\test\poolprobase.Tests\bin\Debug\netcoreapp2.0\poolprobase.Tests.deps.json
+C:\Users\Joey\Desktop\poolprobase-master\aspnet-core\test\poolprobase.Tests\bin\Debug\netcoreapp2.0\poolprobase.Tests.runtimeconfig.json
+C:\Users\Joey\Desktop\poolprobase-master\aspnet-core\test\poolprobase.Tests\bin\Debug\netcoreapp2.0\poolprobase.Tests.runtimeconfig.dev.json
+C:\Users\Joey\Desktop\poolprobase-master\aspnet-core\test\poolprobase.Tests\bin\Debug\netcoreapp2.0\poolprobase.Tests.dll
+C:\Users\Joey\Desktop\poolprobase-master\aspnet-core\test\poolprobase.Tests\bin\Debug\netcoreapp2.0\poolprobase.Tests.pdb
+C:\Users\Joey\Desktop\poolprobase-master\aspnet-core\test\poolprobase.Tests\bin\Debug\netcoreapp2.0\poolprobase.Application.dll
+C:\Users\Joey\Desktop\poolprobase-master\aspnet-core\test\poolprobase.Tests\bin\Debug\netcoreapp2.0\poolprobase.Core.dll
+C:\Users\Joey\Desktop\poolprobase-master\aspnet-core\test\poolprobase.Tests\bin\Debug\netcoreapp2.0\poolprobase.EntityFrameworkCore.dll
+C:\Users\Joey\Desktop\poolprobase-master\aspnet-core\test\poolprobase.Tests\bin\Debug\netcoreapp2.0\poolprobase.Application.pdb
+C:\Users\Joey\Desktop\poolprobase-master\aspnet-core\test\poolprobase.Tests\bin\Debug\netcoreapp2.0\poolprobase.EntityFrameworkCore.pdb
+C:\Users\Joey\Desktop\poolprobase-master\aspnet-core\test\poolprobase.Tests\bin\Debug\netcoreapp2.0\poolprobase.EntityFrameworkCore.dll.config
+C:\Users\Joey\Desktop\poolprobase-master\aspnet-core\test\poolprobase.Tests\bin\Debug\netcoreapp2.0\poolprobase.Core.pdb
+C:\Users\Joey\Desktop\poolprobase-master\aspnet-core\test\poolprobase.Tests\obj\Debug\netcoreapp2.0\poolprobase.Tests.csprojResolveAssemblyReference.cache
+C:\Users\Joey\Desktop\poolprobase-master\aspnet-core\test\poolprobase.Tests\obj\Debug\netcoreapp2.0\poolprobase.Tests.csproj.CoreCompileInputs.cache
+C:\Users\Joey\Desktop\poolprobase-master\aspnet-core\test\poolprobase.Tests\obj\Debug\netcoreapp2.0\poolprobase.Tests.AssemblyInfoInputs.cache
+C:\Users\Joey\Desktop\poolprobase-master\aspnet-core\test\poolprobase.Tests\obj\Debug\netcoreapp2.0\poolprobase.Tests.AssemblyInfo.cs
+C:\Users\Joey\Desktop\poolprobase-master\aspnet-core\test\poolprobase.Tests\obj\Debug\netcoreapp2.0\poolprobase.Tests.dll
+C:\Users\Joey\Desktop\poolprobase-master\aspnet-core\test\poolprobase.Tests\obj\Debug\netcoreapp2.0\poolprobase.Tests.pdb
+C:\Users\Joey\Desktop\poolprobase-customerbroken\aspnet-core\test\poolprobase.Tests\bin\Debug\netcoreapp2.0\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+C:\Users\Joey\Desktop\poolprobase-customerbroken\aspnet-core\test\poolprobase.Tests\bin\Debug\netcoreapp2.0\xunit.runner.utility.netstandard15.dll
+C:\Users\Joey\Desktop\poolprobase-customerbroken\aspnet-core\test\poolprobase.Tests\bin\Debug\netcoreapp2.0\xunit.runner.reporters.netstandard15.dll
+C:\Users\Joey\Desktop\poolprobase-customerbroken\aspnet-core\test\poolprobase.Tests\bin\Debug\netcoreapp2.0\poolprobase.Tests.deps.json
+C:\Users\Joey\Desktop\poolprobase-customerbroken\aspnet-core\test\poolprobase.Tests\bin\Debug\netcoreapp2.0\poolprobase.Tests.runtimeconfig.json
+C:\Users\Joey\Desktop\poolprobase-customerbroken\aspnet-core\test\poolprobase.Tests\bin\Debug\netcoreapp2.0\poolprobase.Tests.runtimeconfig.dev.json
+C:\Users\Joey\Desktop\poolprobase-customerbroken\aspnet-core\test\poolprobase.Tests\bin\Debug\netcoreapp2.0\poolprobase.Tests.dll
+C:\Users\Joey\Desktop\poolprobase-customerbroken\aspnet-core\test\poolprobase.Tests\bin\Debug\netcoreapp2.0\poolprobase.Tests.pdb
+C:\Users\Joey\Desktop\poolprobase-customerbroken\aspnet-core\test\poolprobase.Tests\bin\Debug\netcoreapp2.0\poolprobase.Application.dll
+C:\Users\Joey\Desktop\poolprobase-customerbroken\aspnet-core\test\poolprobase.Tests\bin\Debug\netcoreapp2.0\poolprobase.Core.dll
+C:\Users\Joey\Desktop\poolprobase-customerbroken\aspnet-core\test\poolprobase.Tests\bin\Debug\netcoreapp2.0\poolprobase.EntityFrameworkCore.dll
+C:\Users\Joey\Desktop\poolprobase-customerbroken\aspnet-core\test\poolprobase.Tests\bin\Debug\netcoreapp2.0\poolprobase.Application.pdb
+C:\Users\Joey\Desktop\poolprobase-customerbroken\aspnet-core\test\poolprobase.Tests\bin\Debug\netcoreapp2.0\poolprobase.EntityFrameworkCore.pdb
+C:\Users\Joey\Desktop\poolprobase-customerbroken\aspnet-core\test\poolprobase.Tests\bin\Debug\netcoreapp2.0\poolprobase.EntityFrameworkCore.dll.config
+C:\Users\Joey\Desktop\poolprobase-customerbroken\aspnet-core\test\poolprobase.Tests\bin\Debug\netcoreapp2.0\poolprobase.Core.pdb
+C:\Users\Joey\Desktop\poolprobase-customerbroken\aspnet-core\test\poolprobase.Tests\obj\Debug\netcoreapp2.0\poolprobase.Tests.csprojResolveAssemblyReference.cache
+C:\Users\Joey\Desktop\poolprobase-customerbroken\aspnet-core\test\poolprobase.Tests\obj\Debug\netcoreapp2.0\poolprobase.Tests.csproj.CoreCompileInputs.cache
+C:\Users\Joey\Desktop\poolprobase-customerbroken\aspnet-core\test\poolprobase.Tests\obj\Debug\netcoreapp2.0\poolprobase.Tests.AssemblyInfoInputs.cache
+C:\Users\Joey\Desktop\poolprobase-customerbroken\aspnet-core\test\poolprobase.Tests\obj\Debug\netcoreapp2.0\poolprobase.Tests.AssemblyInfo.cs
+C:\Users\Joey\Desktop\poolprobase-customerbroken\aspnet-core\test\poolprobase.Tests\obj\Debug\netcoreapp2.0\poolprobase.Tests.dll
+C:\Users\Joey\Desktop\poolprobase-customerbroken\aspnet-core\test\poolprobase.Tests\obj\Debug\netcoreapp2.0\poolprobase.Tests.pdb
