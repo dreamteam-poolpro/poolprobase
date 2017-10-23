@@ -18,7 +18,6 @@
 <div class="row clearfix">
     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
         <div class="card">
-
             <div class="header">
                 <h2>
                     Customers - Details
@@ -54,7 +53,7 @@
                             <td>@Html.DisplayFor(model => model.EmailAddress)</td>
                             
 
-                            @*
+                            @* 
                             <td class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                                     <i class="material-icons">menu</i>
@@ -66,7 +65,6 @@
                                 </ul>
                             </td>
                             *@
-
                         </tr>
                     </tbody>
                 </table>
@@ -113,7 +111,7 @@
                         </tr>
                     }
                 </table>
-                <!-- link to create modal-->
+                <!-- link to work order create modal-->
                 <button type="button" class="btn btn-primary btn-circle waves-effect waves-circle waves-float pull-right" data-toggle="modal" data-target="#WorkOrderCreateModal">
                     <i class="material-icons">add</i>
                 </button>
@@ -123,7 +121,11 @@
 </div>
 
 
-<!-- create a work order model-->
+<!-- 
+    create a work order model
+    -currently making this a partial view, should be easier that way
+-->
+@*
 <div class="modal fade" id="WorkOrderCreateModal" tabindex="-1" role="dialog" aria-labelledby="WorkOrderCreateModalLabel" data-backdrop="static">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -134,16 +136,19 @@
             </div>
             <div class="modal-body">
                 <form name="roleCreateForm" role="form" novalidate class="form-validation">
+                    <!-- customer number - should come from the pages model-->
                     <div class="row clearfix">
                         <div class="col-sm-12">
                             <div class="form-group form-float">
                                 <div class="form-line">
-                                    <input id="firstNameValue" type="text" name="Name" required maxlength="32" minlength="2" class="validate form-control">
-                                    <label for="firstNameValue" class="form-label">First Name</label>
+                                    <input id="customerid" type="text" name="Name" required maxlength="32" minlength="2" class="validate form-control">
+                                    <label for="customerid" class="form-label">Customer Id</label>
                                 </div>
                             </div>
                         </div>
                     </div>
+
+                    <!-- first name -->
                     <div class="row clearfix">
                         <div class="col-sm-12">
                             <div class="form-group form-float">
@@ -154,6 +159,19 @@
                             </div>
                         </div>
                     </div>
+
+                    <!-- last name -->
+                    <div class="row clearfix">
+                        <div class="col-sm-12">
+                            <div class="form-group form-float">
+                                <div class="form-line">
+                                    <input id=""
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- assigned service tech -->
                     <div class="row clearfix">
                         <div class="col-sm-12">
                             <div class="form-group form-float">
@@ -164,6 +182,7 @@
                             </div>
                         </div>
                     </div>
+                    <!-- dont need these to create work orders -->
                     <div class="row clearfix">
                         <div class="col-sm-12">
                             <div class="form-group form-float">
@@ -184,6 +203,7 @@
                             </div>
                         </div>
                     </div>
+                    
                     <div class="row clearfix">
                         <div class="col-sm-12">
                         </div>
@@ -198,7 +218,7 @@
         </div>
     </div>
 </div>
-
+*@
 
 <!-- makes it pop up a modal-->
 <div class="modal fade" id="RoleEditModal" tabindex="-1" role="dialog" aria-labelledby="RoleEditModalLabel" data-backdrop="static">

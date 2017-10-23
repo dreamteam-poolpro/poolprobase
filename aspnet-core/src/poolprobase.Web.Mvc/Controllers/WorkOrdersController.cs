@@ -54,6 +54,12 @@ namespace poolprobase.Web.Mvc.Controllers
             return View();
         }
 
+        public IActionResult Create(int Id)
+        {
+            ViewData["CustomerID"] = Id;
+            ViewData["ServiceTechID"] = new SelectList(_context.ServiceTechs, "ServiceTechID", "ServiceTechID");
+            return View();
+        }
         // POST: WorkOrders/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
@@ -174,6 +180,16 @@ namespace poolprobase.Web.Mvc.Controllers
         private bool WorkOrderExists(int id)
         {
             return _context.WorkOrders.Any(e => e.WorkOrderID == id);
+        }
+
+        public async Task<ActionResult> CreateWorkOrdersModal(int id)
+        {
+            var workOrder = await _context.WorkOrders.SingleOrDefaultAsync(m => m.CustomerID == id);
+            if(workOrder == null)
+            {
+                return NotFound();
+            }
+            return View("_CreateWorkOrdersModal", workOrder);
         }
     }
 }

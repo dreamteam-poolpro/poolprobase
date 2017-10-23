@@ -59,7 +59,16 @@
                                         <i class="material-icons">menu</i>
                                     </a>
                                     <ul class="dropdown-menu pull-right">
-                                        <li><a href="#" class="waves-effect waves-block edit-role" data-role-id="@item.CustomerID" data-toggle="modal" data-target="#RoleEditModal"><i class="material-icons">edit</i>@L("Edit")</a></li>
+                                        <!-- link to edit customer modal-->
+                                        <li>
+                                            <a href="#" class="waves-effect waves-block edit-role" data-role-id="@item.CustomerID" data-toggle="modal" data-target="#RoleEditModal">
+                                                <!-- icon -->
+                                                <i class="material-icons">edit</i>
+                                                <!-- the links actual text -->
+                                                @L("Edit")
+                                            </a>
+                                        </li>
+
                                         <li><a href="#" class="waves-effect waves-block delete-role" data-role-id="@item.CustomerID" data-role-name="@item.FirstName"><i class="material-icons">delete_sweep</i>@L("Delete")</a></li>
                                         <li><a class="waves-effect waves-block details-role" asp-action="Details" asp-route-id="@item.CustomerID">Details</a></li>
                                     </ul>
@@ -68,6 +77,7 @@
                         }
                     </tbody>
                 </table>
+                <!-- link to 'create a customer' modal which is defined below-->
                 <button type="button" class="btn btn-primary btn-circle waves-effect waves-circle waves-float pull-right" data-toggle="modal" data-target="#CustomerCreateModal">
                     <i class="material-icons">add</i>
                 </button>

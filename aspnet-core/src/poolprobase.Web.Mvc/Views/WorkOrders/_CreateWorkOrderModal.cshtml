@@ -1,4 +1,11 @@
-﻿@model poolprobase.Web.Models.Customer.WorkOrder
+﻿@using poolprobase.Web.Models.Common.Modals
+@model poolprobase.Web.Models.Customer.WorkOrder
+
+@{ 
+    Layout = null;
+}
+
+@Html.Partial("~/Views/Shared/Modals/_ModalHeader.cshtml", new ModalHeaderViewModel("Create Work Order"))
 
 <h4>WorkOrder</h4>
 <hr />

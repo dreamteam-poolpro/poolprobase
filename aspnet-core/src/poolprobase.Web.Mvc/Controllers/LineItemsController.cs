@@ -24,12 +24,14 @@ namespace poolprobase.Web.Mvc.Controllers
         }
 
         // GET: LineItems
+        // lineitems/index
         public async Task<IActionResult> Index()
         {
             return View(await _context.LineItems.ToListAsync());
         }
 
         // GET: LineItems/Details/5
+        //lineitems/details/workorderid
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -48,14 +50,23 @@ namespace poolprobase.Web.Mvc.Controllers
         }
 
         // GET: LineItems/Create
+        //lineitems/create - loads the lineitems create page, doesn't actually create a line item
         public IActionResult Create()
         {
             return View();
         }
 
+        //line items create modal - loads the line items modal/popup
+        public async Task<ActionResult> CreateLineItemsModal(int workOrderId)
+        {
+            var workOrder = await _context.WorkOrders.SingleOrDefaultAsync(m => m.WorkOrderID == workOrderId);
+            return View("_CreateLineItemsModal", workOrder);
+        }
+
         // POST: LineItems/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
+        // called from lineitems/create to actually create a line item from the data being passed in
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("LineItemID,WordOrderID,Description,Units,UnitCost,Quantity")] LineItem lineItem)
@@ -70,6 +81,7 @@ namespace poolprobase.Web.Mvc.Controllers
         }
 
         // GET: LineItems/Edit/5
+        // lineitems/edit/lineitemid
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -121,6 +133,7 @@ namespace poolprobase.Web.Mvc.Controllers
         }
 
         // GET: LineItems/Delete/5
+        // lineitems/delete - just displays the delete view, doesn't actually delete a line item
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -139,6 +152,7 @@ namespace poolprobase.Web.Mvc.Controllers
         }
 
         // POST: LineItems/Delete/5
+        //called from the line items page to actually delete the line item
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
@@ -148,6 +162,11 @@ namespace poolprobase.Web.Mvc.Controllers
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
+
+        
+
+
+
 
         private bool LineItemExists(int id)
         {

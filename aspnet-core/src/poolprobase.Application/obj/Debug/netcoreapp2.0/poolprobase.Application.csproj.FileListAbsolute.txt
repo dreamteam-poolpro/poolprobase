@@ -31,3 +31,14 @@ C:\Users\Joey\Desktop\poolprobase-customerbroken\aspnet-core\src\poolprobase.App
 C:\Users\Joey\Desktop\poolprobase-customerbroken\aspnet-core\src\poolprobase.Application\obj\Debug\netcoreapp2.0\poolprobase.Application.AssemblyInfo.cs
 C:\Users\Joey\Desktop\poolprobase-customerbroken\aspnet-core\src\poolprobase.Application\obj\Debug\netcoreapp2.0\poolprobase.Application.dll
 C:\Users\Joey\Desktop\poolprobase-customerbroken\aspnet-core\src\poolprobase.Application\obj\Debug\netcoreapp2.0\poolprobase.Application.pdb
+D:\School\codercamps\dreamteam\poolprobase\aspnet-core\src\poolprobase.Application\bin\Debug\netcoreapp2.0\poolprobase.Application.deps.json
+D:\School\codercamps\dreamteam\poolprobase\aspnet-core\src\poolprobase.Application\bin\Debug\netcoreapp2.0\poolprobase.Application.dll
+D:\School\codercamps\dreamteam\poolprobase\aspnet-core\src\poolprobase.Application\bin\Debug\netcoreapp2.0\poolprobase.Application.pdb
+D:\School\codercamps\dreamteam\poolprobase\aspnet-core\src\poolprobase.Application\bin\Debug\netcoreapp2.0\poolprobase.Core.dll
+D:\School\codercamps\dreamteam\poolprobase\aspnet-core\src\poolprobase.Application\bin\Debug\netcoreapp2.0\poolprobase.Core.pdb
+D:\School\codercamps\dreamteam\poolprobase\aspnet-core\src\poolprobase.Application\obj\Debug\netcoreapp2.0\poolprobase.Application.csprojResolveAssemblyReference.cache
+D:\School\codercamps\dreamteam\poolprobase\aspnet-core\src\poolprobase.Application\obj\Debug\netcoreapp2.0\poolprobase.Application.csproj.CoreCompileInputs.cache
+D:\School\codercamps\dreamteam\poolprobase\aspnet-core\src\poolprobase.Application\obj\Debug\netcoreapp2.0\poolprobase.Application.AssemblyInfoInputs.cache
+D:\School\codercamps\dreamteam\poolprobase\aspnet-core\src\poolprobase.Application\obj\Debug\netcoreapp2.0\poolprobase.Application.AssemblyInfo.cs
+D:\School\codercamps\dreamteam\poolprobase\aspnet-core\src\poolprobase.Application\obj\Debug\netcoreapp2.0\poolprobase.Application.dll
+D:\School\codercamps\dreamteam\poolprobase\aspnet-core\src\poolprobase.Application\obj\Debug\netcoreapp2.0\poolprobase.Application.pdb

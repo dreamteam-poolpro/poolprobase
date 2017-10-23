@@ -28,3 +28,13 @@ C:\Users\Joey\Desktop\poolprobase-customerbroken\aspnet-core\src\poolprobase.Cor
 C:\Users\Joey\Desktop\poolprobase-customerbroken\aspnet-core\src\poolprobase.Core\obj\Debug\netcoreapp2.0\poolprobase.Core.AssemblyInfo.cs
 C:\Users\Joey\Desktop\poolprobase-customerbroken\aspnet-core\src\poolprobase.Core\obj\Debug\netcoreapp2.0\poolprobase.Core.dll
 C:\Users\Joey\Desktop\poolprobase-customerbroken\aspnet-core\src\poolprobase.Core\obj\Debug\netcoreapp2.0\poolprobase.Core.pdb
+D:\School\codercamps\dreamteam\poolprobase\aspnet-core\src\poolprobase.Core\bin\Debug\netcoreapp2.0\poolprobase.Core.deps.json
+D:\School\codercamps\dreamteam\poolprobase\aspnet-core\src\poolprobase.Core\bin\Debug\netcoreapp2.0\poolprobase.Core.dll
+D:\School\codercamps\dreamteam\poolprobase\aspnet-core\src\poolprobase.Core\bin\Debug\netcoreapp2.0\poolprobase.Core.pdb
+D:\School\codercamps\dreamteam\poolprobase\aspnet-core\src\poolprobase.Core\obj\Debug\netcoreapp2.0\poolprobase.Core.csprojResolveAssemblyReference.cache
+D:\School\codercamps\dreamteam\poolprobase\aspnet-core\src\poolprobase.Core\obj\Debug\netcoreapp2.0\poolprobase.Core.csproj.CoreCompileInputs.cache
+D:\School\codercamps\dreamteam\poolprobase\aspnet-core\src\poolprobase.Core\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs
+D:\School\codercamps\dreamteam\poolprobase\aspnet-core\src\poolprobase.Core\obj\Debug\netcoreapp2.0\poolprobase.Core.AssemblyInfoInputs.cache
+D:\School\codercamps\dreamteam\poolprobase\aspnet-core\src\poolprobase.Core\obj\Debug\netcoreapp2.0\poolprobase.Core.AssemblyInfo.cs
+D:\School\codercamps\dreamteam\poolprobase\aspnet-core\src\poolprobase.Core\obj\Debug\netcoreapp2.0\poolprobase.Core.dll
+D:\School\codercamps\dreamteam\poolprobase\aspnet-core\src\poolprobase.Core\obj\Debug\netcoreapp2.0\poolprobase.Core.pdb
