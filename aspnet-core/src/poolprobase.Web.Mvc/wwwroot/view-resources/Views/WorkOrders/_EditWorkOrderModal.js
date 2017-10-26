@@ -9,15 +9,15 @@
         if (!_$form.valid()) {
             return;
         }
-        var WorkOrderId = $('#WorkOrderId').val();
-        var CustomerId = $('#CustomerId').val();
+        var id = $('#WorkOrderId').val();
+        var CustomerId = $('#CustomerId').text();
         var ServiceTechId = $("#ServiceTechId").val();
         console.log("workorderid: " + WorkOrderId);
         console.log("customerid: " + CustomerId);
         console.log("servicetechid: " + ServiceTechId);
 
-        //abp.ui.setBusy(_$form);
-        $.post("/WorkOrders/Edit/", { WorkOrderID: WorkOrderId, CustomerID: CustomerId, ServiceTechID: ServiceTechId }).done(function () {
+        abp.ui.setBusy(_$form);
+        $.post("/WorkOrders/Edit/", { WorkOrderID: id, CustomerID: CustomerId, ServiceTechID: ServiceTechId }).done(function () {
             _$modal.modal('hide');
             location.reload(true); //reload page to see edited role!
         }).always(function () {
@@ -47,4 +47,12 @@
             save();
         }
     });
+
+    //$.AdminBSB.input.active(_$form);
+
+
+    //_$modal.on('shown.bs.modal', function () {
+    //    _$form.find('input[type=text]:first').focus();
+    //});
+
 })(jQuery);
