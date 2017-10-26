@@ -71,13 +71,13 @@ namespace poolprobase.Web.Mvc.Controllers
         }
 
         // GET: Customers/Edit/5
+        // this is for the view
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
             {
                 return NotFound();
             }
-
             var customer = await _context.Customers.SingleOrDefaultAsync(m => m.CustomerID == id);
             if (customer == null)
             {
@@ -87,8 +87,7 @@ namespace poolprobase.Web.Mvc.Controllers
         }
 
         // POST: Customers/Edit/5
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
+        // this is for updating the record
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(Customer customer)
@@ -97,7 +96,6 @@ namespace poolprobase.Web.Mvc.Controllers
             {
                 return NotFound();
             }
-
             if (ModelState.IsValid)
             {
                 try

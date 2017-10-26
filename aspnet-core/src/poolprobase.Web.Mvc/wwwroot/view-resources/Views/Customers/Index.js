@@ -1,4 +1,6 @@
-﻿(function () {
+﻿//this is the js file for /Customers/Index
+
+(function () {
 	$(function () {
 
 		var _roleService = abp.services.app.serviceTech;
@@ -9,10 +11,12 @@
 		_$form.validate({
 		});
 
+        //attaching refreshRoleList(); to the refresh button*
 		$('#RefreshButton').click(function () {
 			refreshRoleList();
 		});
 
+        //attatching the delete function to the delete link*
 		$('.delete-role').click(function () {
 			var CustomerId = $(this).attr("data-role-id");
 			var firstName = $(this).attr('data-role-name');
@@ -20,6 +24,8 @@
             deleteCustomer(CustomerId, firstName);
 		});
 
+        //creating and attaching the edit role function to the edit role link
+        // i think this one just pops up the roleedit modal
 		$('.edit-role').click(function (e) {
             var id = $(this).attr("data-role-id");
 
@@ -70,6 +76,7 @@
             refreshRoleList();
         };
 
+        //defining delete customer function 
         function deleteCustomer(customerId, firstName) {
             var recordToDelete = customerId;
             abp.message.confirm(
@@ -80,6 +87,8 @@
 					}
 				}
 			);
-		}
+        }
+
+
 	});
 })();

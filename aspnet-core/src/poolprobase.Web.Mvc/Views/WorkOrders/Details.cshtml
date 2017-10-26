@@ -12,7 +12,7 @@
             <!-- makes a pretty header-->
             <div class="header">
                 <h2>
-                    Customers
+                    Work Order - Details
                 </h2>
                 <!-- a mini 3 dot type of menu for the refresh function-->
                 <ul class="header-dropdown m-r--5">
@@ -67,27 +67,9 @@
                     </td>
                 </tr>
             </table>
-            @* the old ugly dl/dt/dd version of the wo deets
-            <dl class="dl-horizontal">
-                <dt>
-                    @Html.DisplayNameFor(model => model.WO_Customer)
-                </dt>
-                <dd>
-                    @Html.DisplayFor(model => model.WO_Customer.FirstName)
-                    @Html.DisplayFor(model => model.WO_Customer.LastName)
-                </dd>
-                <dt>
-                    @Html.DisplayNameFor(model => model.WO_ServiceTech)
-                </dt>
-                <dd>
-                    @Html.DisplayFor(model => model.WO_ServiceTech.FirstName)
-                    @Html.DisplayFor(model => model.WO_ServiceTech.LastName)
-                </dd>
-            </dl>
-            *@    
-
+            
+            <!-- to display associated line items-->
             <table class="table">
-                <!-- to display associated line items-->
                 <tr>
                     <th>
                         Line Item ID
@@ -130,17 +112,17 @@
                             line item cost goes here
                         </td>
                     </tr>
-
                 }
             </table>
             <!-- pretty button to pop the create line item modal-->
-            <button href="#" class="waves-effect waves-block edit-role" data-role-id="@item.CustomerID" data-toggle="modal" data-target="#RoleEditModal">
+            @*
+            <button href="#" class="waves-effect waves-block edit-role" data-role-id="@Model.WorkOrderID" data-toggle="modal" data-target="#RoleEditModal">
                 <!-- icon -->
                 <i class="material-icons">edit</i>
                 <!-- the links actual text -->
                 @L("Edit")
             </button>
-            
+            *@
                 <button  type="button" class="btn btn-primary btn-circle waves-effect waves-circle waves-float pull-right" data-toggle="modal" data-target="#CreatLineItemModal">
                     <i class="material-icons">add</i>
                 </button>

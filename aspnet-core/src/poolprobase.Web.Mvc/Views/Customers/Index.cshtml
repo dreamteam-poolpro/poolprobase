@@ -68,9 +68,17 @@
                                                 @L("Edit")
                                             </a>
                                         </li>
-
-                                        <li><a href="#" class="waves-effect waves-block delete-role" data-role-id="@item.CustomerID" data-role-name="@item.FirstName"><i class="material-icons">delete_sweep</i>@L("Delete")</a></li>
+                                        <!-- delete link -->
+                                        <li>
+                                            <a href="#" class="waves-effect waves-block delete-role" data-role-id="@item.CustomerID" data-role-name="@item.FirstName">
+                                                <i class="material-icons">delete_sweep</i>
+                                                @L("Delete")
+                                                </a>
+                                        </li>
+                                        
+                                        <!-- details link -->
                                         <li><a class="waves-effect waves-block details-role" asp-action="Details" asp-route-id="@item.CustomerID">Details</a></li>
+                                    
                                     </ul>
                                 </td>
                             </tr>

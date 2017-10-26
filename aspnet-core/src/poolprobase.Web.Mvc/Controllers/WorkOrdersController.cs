@@ -54,6 +54,9 @@ namespace poolprobase.Web.Mvc.Controllers
             return View();
         }
 
+        //this is the create view, so workorders/create
+        //it should have the inputs:
+            //dropdowns for the customer name and service tech
         public IActionResult Create(int Id)
         {
             ViewData["CustomerID"] = Id;
@@ -85,13 +88,13 @@ namespace poolprobase.Web.Mvc.Controllers
             {
                 return NotFound();
             }
-
-            var workOrder = await _context.WorkOrders.SingleOrDefaultAsync(m => m.WorkOrderID == id);
+            var workOrder = await _context.WorkOrders
+                .Include(w => w.WO_Customer)
+                .SingleOrDefaultAsync(m => m.WorkOrderID == id);
             if (workOrder == null)
             {
                 return NotFound();
             }
-            ViewData["CustomerID"] = new SelectList(_context.Customers, "CustomerID", "CustomerID", workOrder.CustomerID);
             ViewData["ServiceTechID"] = new SelectList(_context.ServiceTechs, "ServiceTechID", "ServiceTechID", workOrder.ServiceTechID);
             return View(workOrder);
         }
@@ -101,13 +104,14 @@ namespace poolprobase.Web.Mvc.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("WorkOrderID,CustomerID,ServiceTechID")] WorkOrder workOrder)
+        //public async Task<IActionResult> Edit(int id, [Bind("CustomerID,ServiceTechID")] WorkOrder workOrder) <= the original version
+        public async Task<IActionResult> Edit(WorkOrder workOrder)
         {
-            if (id != workOrder.WorkOrderID)
+            //if (id != workOrder.WorkOrderID)
+            if (workOrder.WorkOrderID != workOrder.WorkOrderID)
             {
                 return NotFound();
             }
-
             if (ModelState.IsValid)
             {
                 try
@@ -128,9 +132,24 @@ namespace poolprobase.Web.Mvc.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["CustomerID"] = new SelectList(_context.Customers, "CustomerID", "CustomerID", workOrder.CustomerID);
-            ViewData["ServiceTechID"] = new SelectList(_context.ServiceTechs, "ServiceTechID", "ServiceTechID", workOrder.ServiceTechID);
             return View(workOrder);
+        }
+
+        // POST: update a workorder's assigned service tech
+        [HttpPost]
+        public async Task<IActionResult> ModalEdit(int id, int ServiceTechID)
+        {
+            if(id == null)
+            {
+                return NotFound();
+            }
+            //find the appropriate workorder
+            var workOrderToUpdate = await _context.WorkOrders.SingleOrDefaultAsync(s => s.WorkOrderID == id);
+            //update the assigned service tech
+            workOrderToUpdate.ServiceTechID = ServiceTechID;
+            //save the changes
+            await _context.SaveChangesAsync();
+            return View(workOrderToUpdate);
         }
 
         // GET: WorkOrders/Delete/5
@@ -165,15 +184,19 @@ namespace poolprobase.Web.Mvc.Controllers
         }
 
         // the modal / popup for editing a work order
-
-        public async Task<ActionResult> EditWordOrderModal(int id)
+        public async Task<ActionResult> EditWorkOrderModal(int id)
         {
-            var workorder = await _context.WorkOrders.SingleOrDefaultAsync(w => w.WorkOrderID == id);
+            var workorder = await _context.WorkOrders
+                .Include(w => w.WO_Customer)
+                .SingleOrDefaultAsync(w => w.WorkOrderID == id);
+            
             if(workorder == null)
             {
                 return NotFound();
             }
 
+            ViewData["CustomerID"] = new SelectList(_context.Customers, "CustomerID", "CustomerID");
+            ViewData["ServiceTechID"] = new SelectList(_context.ServiceTechs, "ServiceTechID", "ServiceTechID");
             return View("_EditWorkOrderModal", workorder);
         }
 

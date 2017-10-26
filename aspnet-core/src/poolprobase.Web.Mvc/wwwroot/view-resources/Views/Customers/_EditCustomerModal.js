@@ -1,9 +1,11 @@
 ﻿(function ($) {
 
+    
     var _roleService = abp.services.app.role;
     var _$modal = $('#EditCustomerModal');
     var _$form = $('form[name=RoleEditForm]');
 
+    //define save function
     function save() {
 
         if (!_$form.valid()) {

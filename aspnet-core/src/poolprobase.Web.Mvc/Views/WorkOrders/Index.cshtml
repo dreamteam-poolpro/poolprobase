@@ -1,6 +1,8 @@
 ﻿
 @using poolprobase.Web.Startup
+
 @model IEnumerable<poolprobase.Web.Models.Customer.WorkOrder>
+
 @{
     ViewBag.CurrentPageName = PageNames.WorkOrders; //The menu item will be active for this page.
     ViewData["Title"] = "Work Orders";
@@ -15,6 +17,7 @@
         <script src="~/view-resources/Views/WordOrders/Index.min.js" asp-append-version="true"></script>
     </environment>
 }
+
 
 <div class="row clearfix">
     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -54,13 +57,35 @@
                                 <td>@item.WO_Customer.Address</td>
                                 <td>@item.WO_ServiceTech.FirstName @item.WO_ServiceTech.LastName</td>
 
+                                <!-- 3 bars type menu for each work order in the list of workorders -->
                                 <td class="dropdown">
+
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                                         <i class="material-icons">menu</i>
                                     </a>
-                                    <ul class="dropdown-menu pull-right">
-                                        <li><a class="waves-effect waves-block edit-role" asp-action="Edit" asp-route-id="@item.WorkOrderID">Edit</a></li>
+
+                                    <ul class="dropdown-menu pull-right">                     
+                                        
+                                       
+                                        <!-- edit link -->
+                                        <li>
+                                            <a class="waves-effect waves-block edit-role" data-toggle="modal" data-role-id="@item.WorkOrderID" data-target="#WorkOrderEditModal">
+                                                Edit
+                                            </a>
+                                        </li>
+                                        
+
+                                        <!-- details link -->
                                         <li><a class="waves-effect waves-block" asp-action="Details" asp-route-id="@item.WorkOrderID">Details</a></li>
+                                        
+                                        <!-- delete link -->
+                                        <li>
+                                            <a class="waves-effect waves-block delete-role" data-role-id="@item.WorkOrderID" data-role-name="@item.WO_Customer.FirstName @item.WO_Customer.LastName">
+                                                <i class="material-icons">delete_sweep</i>
+                                                @L("Delete")
+                                            </a>                                         
+                                        </li>
+
                                     </ul>
                                 </td>
 
@@ -71,7 +96,12 @@
                                     </a>
                                     <ul class="dropdown-menu pull-right">
                                         <!-- edit -->
-                                        <li><a href="#" class="waves-effect waves-block edit-role" data-role-id="@item.CustomerID" data-toggle="modal" data-target="#RoleEditModal"><i class="material-icons">edit</i>@L("Edit")</a></li>
+                                        <li>
+                                            <a href="#" class="waves-effect waves-block edit-role" data-role-id="@item.CustomerID" data-toggle="modal" data-target="#RoleEditModal">
+                                                <i class="material-icons">edit</i>
+                                                    @L("Edit")
+                                            </a>
+                                        </li>
                                         <!-- delete -->
                                         <li><a href="#" class="waves-effect waves-block delete-role" data-role-id="@item.CustomerID" data-role-name="@item.FirstName"><i class="material-icons">delete_sweep</i>@L("Delete")</a></li>
                                         <!-- details -->
@@ -89,6 +119,7 @@
         </div>
     </div>
 </div>
+
 <!-- word order create modal-->
 <div class="modal fade" id="CustomerCreateModal" tabindex="-1" role="dialog" aria-labelledby="CustomerCreateModalLabel" data-backdrop="static">
     <div class="modal-dialog" role="document">
@@ -165,7 +196,7 @@
     </div>
 </div>
 <!-- makes it pop up a modal-->
-<div class="modal fade" id="RoleEditModal" tabindex="-1" role="dialog" aria-labelledby="RoleEditModalLabel" data-backdrop="static">
+<div class="modal fade" id="WorkOrderEditModal" tabindex="-1" role="dialog" aria-labelledby="WorkOrderEditModalLabel" data-backdrop="static">
     <div class="modal-dialog" role="document">
         <!-- class type tells is to load the partial view as a modal -->
         <div class="modal-content">
@@ -173,6 +204,8 @@
         </div>
     </div>
 </div>
+
+
 
 @*
 
