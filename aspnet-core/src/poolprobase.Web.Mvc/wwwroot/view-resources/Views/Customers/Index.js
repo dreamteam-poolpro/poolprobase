@@ -26,11 +26,14 @@
 
         //creating and attaching the edit role function to the edit role link
         // i think this one just pops up the roleedit modal
-		$('.edit-role').click(function (e) {
+        $('.edit-role').click(function (e) {
+            console.log("Somebody clicked the save button");
             var id = $(this).attr("data-role-id");
 
-			e.preventDefault();
-			$.ajax({
+            e.preventDefault();
+
+            $.ajax({
+                //                 controller/action
                 url: abp.appPath + 'Customers/EditCustomersModal?id=' + id,
 				type: 'POST',
 				contentType: 'application/html',
@@ -87,8 +90,8 @@
 					}
 				}
 			);
-        }
+        };
 
 
-	});
+    });
 })();

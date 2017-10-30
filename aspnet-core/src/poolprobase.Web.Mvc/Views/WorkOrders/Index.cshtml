@@ -22,10 +22,12 @@
 <div class="row clearfix">
     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
         <div class="card">
+
             <div class="header">
                 <h2>
                     Work Orders
                 </h2>
+
                 <ul class="header-dropdown m-r--5">
                     <li class="dropdown">
                         <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
@@ -37,6 +39,7 @@
                     </li>
                 </ul>
             </div>
+
             <div class="body table-responsive">
                 <table class="table">
                     <thead>
@@ -44,8 +47,7 @@
                             <th>Work Order ID</th>
                             <th>Customer</th>
                             <th>Address</th>
-                            <th>Service Tech</th>
-                            
+                            <th>Service Tech</th>                            
                         </tr>
                     </thead>
                     <tbody>
@@ -70,13 +72,17 @@
                                         <!-- edit link -->
                                         <li>
                                             <a class="waves-effect waves-block edit-role" data-toggle="modal" data-role-id="@item.WorkOrderID" data-target="#WorkOrderEditModal">
-                                                Edit
+                                                <i class="material-icons">edit</i>Edit
                                             </a>
                                         </li>
                                         
 
                                         <!-- details link -->
-                                        <li><a class="waves-effect waves-block" asp-action="Details" asp-route-id="@item.WorkOrderID">Details</a></li>
+                                        <li>
+                                            <a class="waves-effect waves-block" asp-action="Details" asp-route-id="@item.WorkOrderID">
+                                                <i class="material-icons">details</i>Details
+                                            </a>
+                                        </li>
                                         
                                         <!-- delete link -->
                                         <li>
@@ -87,27 +93,7 @@
                                         </li>
 
                                     </ul>
-                                </td>
-
-                                <!--@*
-                                <td class="dropdown">
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                                        <i class="material-icons">menu</i>
-                                    </a>
-                                    <ul class="dropdown-menu pull-right">
-                                        <!-- edit -->
-                                        <li>
-                                            <a href="#" class="waves-effect waves-block edit-role" data-role-id="@item.CustomerID" data-toggle="modal" data-target="#RoleEditModal">
-                                                <i class="material-icons">edit</i>
-                                                    @L("Edit")
-                                            </a>
-                                        </li>
-                                        <!-- delete -->
-                                        <li><a href="#" class="waves-effect waves-block delete-role" data-role-id="@item.CustomerID" data-role-name="@item.FirstName"><i class="material-icons">delete_sweep</i>@L("Delete")</a></li>
-                                        <!-- details -->
-                                        <li><a href="#" class="waves-effect waves-block details-role" asp-action="Details" asp-route-id="@item.CustomerID">Details</a></li>
-                                    </ul>
-                                </td>*@-->
+                                </td>                                
                             </tr>
                         }
                     </tbody>
@@ -115,82 +101,6 @@
                 <button type="button" class="btn btn-primary btn-circle waves-effect waves-circle waves-float pull-right" data-toggle="modal" data-target="#WorkOrderCreateModal">
                     <i class="material-icons">add</i>
                 </button>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- word order create modal-->
-<div class="modal fade" id="CustomerCreateModal" tabindex="-1" role="dialog" aria-labelledby="CustomerCreateModalLabel" data-backdrop="static">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h4 class="modal-title">
-                    <span>Create WorkOrder</span>
-                </h4>
-            </div>
-            <div class="modal-body">
-                <form name="roleCreateForm" role="form" novalidate class="form-validation">
-                    <div class="row clearfix">
-                        <div class="col-sm-12">
-                            <div class="form-group form-float">
-                                <!-- list of customers dropdown-->
-                                <div class="form-line">
-                                    <input id="firstNameValue" type="text" name="Name" required maxlength="32" minlength="2" class="validate form-control">
-                                    <label for="firstNameValue" class="form-label">First Name</label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row clearfix">
-                        <div class="col-sm-12">
-                            <div class="form-group form-float">
-                                <div class="form-line">
-                                    <input id="lastNameValue" type="text" name="DisplayName" required maxlength="32" minlength="2" class="validate form-control">
-                                    <label for="lastNameValue" class="form-label">Last Name</label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row clearfix">
-                        <div class="col-sm-12">
-                            <div class="form-group form-float">
-                                <div class="form-line">
-                                    <input id="addressValue" type="text" name="Address" required maxlength="32" minlength="2" class="validate form-control">
-                                    <label for="addressValue" class="form-label">Address</label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row clearfix">
-                        <div class="col-sm-12">
-                            <div class="form-group form-float">
-                                <div class="form-line">
-                                    <input id="phoneNumberValue" type="tel" name="PhoneNumber" required maxlength="32" minlength="2" class="validate form-control">
-                                    <label for="phoneNumberValue" class="form-label">Phone Number</label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row clearfix">
-                        <div class="col-sm-12">
-                            <div class="form-group form-float">
-                                <div class="form-line">
-                                    <input id="emailAddressValue" type="email" name="EmailAddress" required maxlength="32" minlength="2" class="validate form-control">
-                                    <label for="emailAddressValue" class="form-label">Email Address</label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row clearfix">
-                        <div class="col-sm-12">
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">Cancel</button>
-                        <button type="submit" class="btn btn-primary waves-effect">Save</button>
-                    </div>
-                </form>
             </div>
         </div>
     </div>

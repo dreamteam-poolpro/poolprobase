@@ -19,5 +19,6 @@
         public const string WorkOrders = "WorkOrders";
         public const string CreateWorkOrders = "CreateWorkOrders";
         public const string EditWordOrders = "EditWorkOrders";
+        public const string WorkOrderDetails = "WorkOrderDetails";
     }
 }

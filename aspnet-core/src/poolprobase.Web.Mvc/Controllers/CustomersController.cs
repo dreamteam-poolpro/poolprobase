@@ -155,13 +155,11 @@ namespace poolprobase.Web.Mvc.Controllers
 
         public async Task<ActionResult> EditCustomersModal(int id)
         {
-
             var customer = await _context.Customers.SingleOrDefaultAsync(m => m.CustomerID == id);
             if (customer == null)
             {
                 return NotFound();
             }
-
             return View("_EditCustomersModal", customer);
         }
     }

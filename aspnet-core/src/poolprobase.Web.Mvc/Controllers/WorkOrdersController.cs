@@ -188,23 +188,31 @@ namespace poolprobase.Web.Mvc.Controllers
         {
             var workorder = await _context.WorkOrders
                 .Include(w => w.WO_Customer)
-                .SingleOrDefaultAsync(w => w.WorkOrderID == id);
-            
+                .SingleOrDefaultAsync(w => w.WorkOrderID == id);            
             if(workorder == null)
             {
                 return NotFound();
             }
-
             ViewData["CustomerID"] = new SelectList(_context.Customers, "CustomerID", "CustomerID");
             ViewData["ServiceTechID"] = new SelectList(_context.ServiceTechs, "ServiceTechID", "ServiceTechID");
             return View("_EditWorkOrderModal", workorder);
+        }
+
+        // the modal/popup for adding a line itme to a work order
+        public async Task<ActionResult> AddLineItemModal(int id)
+        {
+            var workorder = await _context.WorkOrders.SingleOrDefaultAsync(m => m.WorkOrderID == id);
+            if (workorder == null)
+            {
+                return NotFound();
+            }
+            return View("_AddLineItemModal", workorder);
         }
 
         private bool WorkOrderExists(int id)
         {
             return _context.WorkOrders.Any(e => e.WorkOrderID == id);
         }
-
         public async Task<ActionResult> CreateWorkOrdersModal(int id)
         {
             var workOrder = await _context.WorkOrders.SingleOrDefaultAsync(m => m.CustomerID == id);
@@ -214,5 +222,6 @@ namespace poolprobase.Web.Mvc.Controllers
             }
             return View("_CreateWorkOrdersModal", workOrder);
         }
+        
     }
 }

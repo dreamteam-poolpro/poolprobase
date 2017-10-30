@@ -1,6 +1,8 @@
-﻿(function () {
-    $(function () {
+﻿// this is for workorders/index
 
+(function () {
+    $(function () {
+        console.log("index.js loaded")
         //not sure what this is and don't see where' it's being used
         var _roleService = abp.services.app.serviceTech;
 
@@ -34,16 +36,13 @@
 
         //create and attach the edit workOrder function
         $('.edit-role').click(function (e) {
-            console.log("sombody clicked the edit link");
-            
+            console.log("sombody clicked the edit link");            
             //grab the id of the work order to be edited
             var id = $(this).attr("data-role-id");
             console.log("for id: " + id);
-
             // not sure what this does, prevent default value assignment?
             // prevent defautl error message?
             e.preventDefault();
-
             $.ajax({
                 url: abp.appPath + 'WorkOrders/EditWorkOrderModal/' + id,
                 type: 'POST',
@@ -73,7 +72,7 @@
                     }
                 }
             );
-        }
+        };
 
 
         //define refreshRoleList();

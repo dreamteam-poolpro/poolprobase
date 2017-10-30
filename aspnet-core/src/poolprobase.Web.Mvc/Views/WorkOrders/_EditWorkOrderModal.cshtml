@@ -1,6 +1,4 @@
-﻿
-
-@using poolprobase.Web.Models.Common.Modals
+﻿@using poolprobase.Web.Models.Common.Modals
 @model poolprobase.Web.Models.Customer.WorkOrder
 @{
     Layout = null;
@@ -15,7 +13,7 @@
         <dt>Work Order:</dt> <dd>#@Model.WorkOrderID</dd>
         <dt>Customer:</dt> <dd>@Model.WO_Customer.FirstName @Model.WO_Customer.LastName - <span id="CustomerId">@Model.WO_Customer.CustomerID</span></dd>
         <dt>Address:</dt> <dd>@Model.WO_Customer.Address</dd>
-   </dl>
+    </dl>
 
     <form name="WorkOrderEditForm" role="form" novalidate class="form-validation">
         <!-- workorderid -->
@@ -30,21 +28,7 @@
                 </div>
             </div>
         </div>
-        @* should not be able to change the customer attached to an work order
-        <!-- customer id -->
-        <div class="row clearfix">
-            <div class="col-sm-12">
-                <div class="form-group form-float">
-                    <div class="form-line">  
-                        <label asp-for="CustomerID" class="control-label"></label>
-                        <select asp-for="CustomerID" class="form-control" asp-items="ViewBag.CustomerID" id="CustomerId"></select>
-                        <span asp-validation-for="CustomerID" class="text-danger"></span>                        
-                    </div>
-                </div>
-            </div>
-        </div>
-        *@
-        
+                
         <!-- assigned service tech -->
         <div class="row clearfix">
             <div class="col-sm-12">
@@ -57,30 +41,6 @@
                 </div>
             </div>
         </div>
-
-        @*
-        <div class="row clearfix">
-            <div class="col-sm-12">
-                <div class="form-group form-float">
-                    <div class="form-line">
-                        <input id="phoneNumber" type="tel" name="phoneNumber" value="@Model.PhoneNumber" required maxlength="32" minlength="2" class="validate form-control">
-                        <label for="phoneNumber" class="form-label">Phone Number</label>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row clearfix">
-            <div class="col-sm-12">
-                <div class="form-group form-float">
-                    <div class="form-line">
-                        <input id="emailAddress" type="email" name="emailAddress" value="@Model.EmailAddress" required maxlength="32" minlength="2" class="validate form-control">
-                        <label for="emailAddress" class="form-label">Email Address</label>
-                    </div>
-                </div>
-            </div>
-        </div>
-        *@
-
     </form>
 </div>
 

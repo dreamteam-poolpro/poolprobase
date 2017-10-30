@@ -1,10 +1,20 @@
-﻿@model poolprobase.Web.Models.Customer.WorkOrder
+﻿
+@using poolprobase.Web.Startup
+
+@model poolprobase.Web.Models.Customer.WorkOrder
 
 @{
-    ViewData["Title"] = "Details";
+    ViewBag.CurrentPageName = PageNames.WorkOrderDetails;
+    ViewData["Title"] = "Work Order - Details";
 }
-
-<h2>Details</h2>
+@section scripts{ 
+<environment names="Development">
+    <script src="~/view-resources/Views/WorkOrders/details.js" asp-append-version="true"></script>
+</environment>
+<environment names="Staging,Production">
+    <script src="~/view-resources/Views/WorkOrders/details.js" asp-append-version="true"></script>
+</environment>
+}
 <!-- creates a 'card' section -->
 <div class="row clearfix">
     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -25,118 +35,96 @@
                         </ul>
                     </li>
                 </ul>
+
             </div>
             <!-- a table to display the work orders details-->
-            <table class="table">
-                <!-- table headers-->
-                <tr>
-                    <th>
-                        Customer Id 
-                    </th>
-                    <th>
-                        Name 
-                    </th>
-                    <th> 
-                        Address
-                    </th>
-                    <th>
-                        Service Tech Id
-                    </th>
-                    <th>
-                        Name
-                    </th>
-                </tr>
-                <!-- values -->
-                <tr>
-                    <td>
-                        @Html.DisplayFor(model => model.WO_Customer.CustomerID)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(model => model.WO_Customer.FirstName)
-                        @Html.DisplayFor(model => model.WO_Customer.LastName)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(model => model.WO_Customer.Address)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(model => model.WO_ServiceTech.ServiceTechID)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(model => model.WO_ServiceTech.FirstName)
-                        @Html.DisplayFor(model => model.WO_ServiceTech.LastName)
-                    </td>
-                </tr>
-            </table>
-            
-            <!-- to display associated line items-->
-            <table class="table">
-                <tr>
-                    <th>
-                        Line Item ID
-                    </th>
-                    <th>
-                        Description
-                    </th>
-                    <th>
-                        Quantity
-                    </th>
-                    <th>
-                        Units
-                    </th>
-                    <th>
-                        Unit Cost
-                    </th>
-                    <th>
-                        Total Cost
-                    </th>
-                </tr>
-                @foreach (var item in Model.WO_LineItems)
-                {
+            <div class="body table-responsive">
+                <table class="table">
+                    <!-- table headers-->
+                    <tr>
+                        <th>Customer Id</th>
+                        <th>Name</th>
+                        <th>Address</th>
+                        <th>Service Tech Id</th>
+                        <th>Name</th>
+                    </tr>
+                    <!-- values -->
                     <tr>
                         <td>
-                            @Html.DisplayFor(modelItem => item.LineItemID)
+                            @Html.DisplayFor(model => model.WO_Customer.CustomerID)
                         </td>
                         <td>
-                            @Html.DisplayFor(modelItem => item.Description)
+                            @Html.DisplayFor(model => model.WO_Customer.FirstName)
+                            @Html.DisplayFor(model => model.WO_Customer.LastName)
                         </td>
                         <td>
-                            @Html.DisplayFor(modelItem => item.Quantity)
+                            @Html.DisplayFor(model => model.WO_Customer.Address)
                         </td>
                         <td>
-                            @Html.DisplayFor(modelItem => item.Units)
+                            @Html.DisplayFor(model => model.WO_ServiceTech.ServiceTechID)
                         </td>
                         <td>
-                            @Html.DisplayFor(modelItem => item.UnitCost)
-                        </td>
-                        <td>
-                            line item cost goes here
+                            @Html.DisplayFor(model => model.WO_ServiceTech.FirstName)
+                            @Html.DisplayFor(model => model.WO_ServiceTech.LastName)
                         </td>
                     </tr>
-                }
-            </table>
-            <!-- pretty button to pop the create line item modal-->
-            @*
-            <button href="#" class="waves-effect waves-block edit-role" data-role-id="@Model.WorkOrderID" data-toggle="modal" data-target="#RoleEditModal">
-                <!-- icon -->
-                <i class="material-icons">edit</i>
-                <!-- the links actual text -->
-                @L("Edit")
-            </button>
-            *@
-                <button  type="button" class="btn btn-primary btn-circle waves-effect waves-circle waves-float pull-right" data-toggle="modal" data-target="#CreatLineItemModal">
+                </table>
+
+                <!-- to display associated line items-->
+                <table class="table">
+                    <tr>
+                        <th>
+                            Line Item ID
+                        </th>
+                        <th>
+                            Description
+                        </th>
+                        <th>
+                            Quantity
+                        </th>
+                        <th>
+                            Units
+                        </th>
+                        <th>
+                            Unit Cost
+                        </th>
+                        <th>
+                            Total Cost
+                        </th>
+                    </tr>
+                    @foreach (var item in Model.WO_LineItems)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.LineItemID)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Description)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Quantity)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Units)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.UnitCost)
+                            </td>
+                            <td>
+                                line item cost goes here
+                            </td>
+                        </tr>
+                    }
+                </table>
+                <button type="button" data-toggle="modal" data-target="#AddLineItemModal" data-role-id="@Model.WorkOrderID" class="btn btn-primary btn-circle waves-effect waves-circle waves-float pull-right add-lineitem" >
                     <i class="material-icons">add</i>
                 </button>
-            
-        </div>
-        <div>
-            <a asp-action="Edit" asp-route-id="@Model.WorkOrderID">Edit</a> |
-            <a asp-action="Index">Back to List</a>
+            </div>
         </div>
     </div>
  </div>
-
 <!-- makes it pop up a modal-->
-<div class="modal fade" id="CreateLineItemModal" tabindex="-1" role="dialog" aria-labelledby="" data-backdrop="static">
+<div class="modal fade" id="AddLineItemModal" tabindex="-1" role="dialog" aria-labelledby="AddLineItemModalLabel" data-backdrop="static">
     <div class="modal-dialog" role="document">
         <!-- class type tells is to load the partial view as a modal -->
         <div class="modal-content">
