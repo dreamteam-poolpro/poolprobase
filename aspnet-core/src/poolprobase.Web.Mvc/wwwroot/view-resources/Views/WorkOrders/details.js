@@ -28,7 +28,7 @@
                 },
                 error: function (e) { }
             });
-        });
+        });        
 
         function refreshRoleList() {
             location.reload(true);

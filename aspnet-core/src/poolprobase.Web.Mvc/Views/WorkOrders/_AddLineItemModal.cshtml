@@ -1,6 +1,5 @@
 ﻿@using poolprobase.Web.Models.Common.Modals
 @model poolprobase.Web.Models.Customer.WorkOrder
-
 @{ 
     Layout = null;
 }
@@ -10,16 +9,19 @@
 <!-- form for the user to put in the values of the line item -->
 <div class="modal-body">
 
+    <!-- a form for the line item inputs -->
     <form name="AddLineItemForm" role="form" novalidate class="form-validation">
+
         <!-- so it's easy to grab the work orderid to be sent to the lineitems controller-->
-        <input id="WorkOrderId" type="hidden" name="Id" value="@Model.WorkOrderID" />        
+        <input id="workorderidinput" type="hidden" name="Id" value="@Model.WorkOrderID" />  
+        
         <!-- description -->
         <div class="row clearfix">
             <div class="col-sm-12">
                 <div class="form-group form-float">
                     <div class="form-line">
-                        <input id="descriptioninput" type="text" name="description" class="validate form-control" />
-                        <label for="description" class="form-label">Description</label>
+                        <input id="descriptioninput" type="text" name="description" required class="validate form-control" />
+                        <label for="descriptioninput" class="form-label">Description</label>
                     </div>
                 </div>
             </div>
@@ -31,7 +33,7 @@
                 <div class="form-group form-float">
                     <div class="form-line">
                         <input id="quantityinput" type="text" name="quantity" class="validate form-control" />
-                        <label for="quantity" class="form-label">Quantity</label>
+                        <label for="quantityinput" class="form-label">Quantity</label>
                     </div>
                 </div>
             </div>
@@ -43,7 +45,7 @@
                 <div class="form-group form-float">
                     <div class="form-line">
                         <input id="unitsinput" type="text" name="units" class="validate form-control" />
-                        <label for="units" class="form-label">Units</label>
+                        <label for="unitsinput" class="form-label">Units</label>
                     </div>
                 </div>
             </div>
@@ -55,7 +57,7 @@
                 <div class="form-group form-float">
                     <div class="form-line">
                         <input id="unitcostinput" type="text" name="unitcost" class="validate form-control" />
-                        <label for="units" class="form-label">Unit Cost</label>
+                        <label for="unitsinput" class="form-label">Unit Cost</label>
                     </div>
                 </div>
             </div>
@@ -67,13 +69,18 @@
                 <div class="form-group form-float">
                     <div class="form-line">
                         <input id="totalcostinput" type="text" name="totalcost" class="validate form-control" readonly/>
-                        <label for="totalcost" class="form-label"></label>
+                        <label for="totalcostinput" class="form-label"></label>
                     </div>
                 </div>
             </div>
         </div>
+
     </form>
 </div>
-<!-- save button -->
+
+<!-- save and cancel button -->
 @Html.Partial("~/Views/Shared/Modals/_ModalFooterWithSaveAndCancel.cshtml")
+
+<script src="~/view-resources/Views/WorkOrders/_AddLineItemModal.js" asp-append-version="true"></script>
+
 

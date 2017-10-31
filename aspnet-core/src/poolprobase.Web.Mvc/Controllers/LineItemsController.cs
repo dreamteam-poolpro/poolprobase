@@ -56,20 +56,13 @@ namespace poolprobase.Web.Mvc.Controllers
             return View();
         }
 
-        //line items create modal - loads the line items modal/popup
-        public async Task<ActionResult> CreateLineItemsModal(int workOrderId)
-        {
-            var workOrder = await _context.WorkOrders.SingleOrDefaultAsync(m => m.WorkOrderID == workOrderId);
-            return View("_CreateLineItemsModal", workOrder);
-        }
-
-        // POST: LineItems/Create
+                // POST: LineItems/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         // called from lineitems/create to actually create a line item from the data being passed in
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("LineItemID,WordOrderID,Description,Units,UnitCost,Quantity")] LineItem lineItem)
+        public async Task<IActionResult> Create([Bind("WordOrderID,Description,Units,UnitCost,Quantity")] LineItem lineItem)
         {
             if (ModelState.IsValid)
             {

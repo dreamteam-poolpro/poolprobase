@@ -208,6 +208,21 @@ namespace poolprobase.Web.Mvc.Controllers
             }
             return View("_AddLineItemModal", workorder);
         }
+        //the action for actually adding the line item, not sure if it's appropriate
+        //to put this here or not but since it's used on the work orders section of th
+        //app it seems like it's appropriate
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> AddLineItem([Bind("WordOrderID,Description,Units,UnitCost,Quantity")] LineItem lineItem)
+        {
+            if (ModelState.IsValid)
+            {
+                _context.Add(lineItem);
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
+            }
+            return View(lineItem);
+        }
 
         private bool WorkOrderExists(int id)
         {

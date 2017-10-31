@@ -1,5 +1,4 @@
 ﻿(function ($) {
-
     
     var _roleService = abp.services.app.role;
     var _$modal = $('#EditCustomerModal');
@@ -7,11 +6,9 @@
 
     //define save function
     function save() {
-
         if (!_$form.valid()) {
             return;
         }
-
         var id = $("#id").val();
         var firstNameValue = $("#rolename").val();
         var lastNameValue = $("#displayname").val();

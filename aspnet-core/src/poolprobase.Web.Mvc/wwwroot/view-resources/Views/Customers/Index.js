@@ -45,6 +45,8 @@
             //$.POST('/ServiceTechs/EditTechsModal?id=' + id);
 		});
 
+
+        //the create customers button?
 		_$form.find('button[type="submit"]').click(function (e) {
 			e.preventDefault();
 
