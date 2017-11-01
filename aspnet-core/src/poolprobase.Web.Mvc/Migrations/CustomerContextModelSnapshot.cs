@@ -54,9 +54,7 @@ namespace poolprobase.Web.Migrations
 
                     b.Property<string>("Units");
 
-                    b.Property<int>("WordOrderID");
-
-                    b.Property<int?>("WorkOrderID");
+                    b.Property<int>("WorkOrderID");
 
                     b.HasKey("LineItemID");
 
@@ -103,7 +101,8 @@ namespace poolprobase.Web.Migrations
                 {
                     b.HasOne("poolprobase.Web.Models.Customer.WorkOrder")
                         .WithMany("WO_LineItems")
-                        .HasForeignKey("WorkOrderID");
+                        .HasForeignKey("WorkOrderID")
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 
             modelBuilder.Entity("poolprobase.Web.Models.Customer.WorkOrder", b =>

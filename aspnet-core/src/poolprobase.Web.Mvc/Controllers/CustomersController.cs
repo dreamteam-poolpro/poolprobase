@@ -32,15 +32,12 @@ namespace poolprobase.Web.Mvc.Controllers
             if (id == null)
             {
                 return NotFound();
-            }
-                                               
+            }                                               
            var customer = await _context.Customers
                 .Include(w => w.CU_WorkOrders)
                     .ThenInclude(s => s.WO_ServiceTech)
-                .Include(w => w.CU_WorkOrders)
-                    
-                .SingleOrDefaultAsync(m => m.CustomerID == id);
-                
+                .Include(w => w.CU_WorkOrders)                    
+                .SingleOrDefaultAsync(m => m.CustomerID == id);                
             if (customer == null)
             {
                 return NotFound();

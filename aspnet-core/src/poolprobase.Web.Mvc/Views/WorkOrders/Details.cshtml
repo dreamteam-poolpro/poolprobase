@@ -22,8 +22,9 @@
             <!-- makes a pretty header-->
             <div class="header">
                 <h2>
-                    Work Order - Details
+                    Work Order Number: #@Model.WorkOrderID
                 </h2>
+
                 <!-- a mini 3 dot type of menu for the refresh function-->
                 <ul class="header-dropdown m-r--5">
                     <li class="dropdown">
@@ -116,9 +117,11 @@
                         </tr>
                     }
                 </table>
+
                 <button type="button" data-toggle="modal" data-target="#AddLineItemModal" data-role-id="@Model.WorkOrderID" class="btn btn-primary btn-circle waves-effect waves-circle waves-float pull-right add-lineitem" >
                     <i class="material-icons">add</i>
                 </button>
+
             </div>
         </div>
     </div>

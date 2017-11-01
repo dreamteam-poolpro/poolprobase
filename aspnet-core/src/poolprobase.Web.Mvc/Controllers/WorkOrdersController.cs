@@ -208,12 +208,13 @@ namespace poolprobase.Web.Mvc.Controllers
             }
             return View("_AddLineItemModal", workorder);
         }
+
         //the action for actually adding the line item, not sure if it's appropriate
         //to put this here or not but since it's used on the work orders section of th
         //app it seems like it's appropriate
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> AddLineItem([Bind("WordOrderID,Description,Units,UnitCost,Quantity")] LineItem lineItem)
+        public async Task<IActionResult> AddLineItem(LineItem lineItem)
         {
             if (ModelState.IsValid)
             {
@@ -240,3 +241,19 @@ namespace poolprobase.Web.Mvc.Controllers
         
     }
 }
+/*
+       //primary key
+       public int WorkOrderID { get; set; }
+
+       //foreign key
+       public int CustomerID { get; set; }
+       public int ServiceTechID { get; set; }
+
+       //navigation properties
+       public Customer WO_Customer { get; set; }
+       public ServiceTech WO_ServiceTech { get; set; }
+       public List<LineItem> WO_LineItems { get; set; }
+
+        //properties
+        public Status WO_Status { get; set; } = Status.Assigned;
+*/

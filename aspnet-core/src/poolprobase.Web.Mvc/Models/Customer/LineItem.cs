@@ -12,7 +12,7 @@ namespace poolprobase.Web.Models.Customer
        public int LineItemID { get; set; }
 
         //foreign key
-        public int WordOrderID { get; set; }
+        public int WorkOrderID { get; set; }
 
         //data
         public string Description { get; set; }

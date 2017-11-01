@@ -36,7 +36,7 @@
             console.log("quantity: " + quantity);
             console.log("units: " + units);
             console.log("unit cost: " + unitcost);
-            /*
+            
             abp.ui.setBusy(_$form);
             $.post("/WorkOrders/AddLineItem/", { WorkOrderID: workorderid, Description: description, Units: units, UnitCost: unitcost, Quantity: quantity }).done(function () {
                 _$modal.modal('hide');
@@ -44,7 +44,7 @@
             }).always(function () {
                 abp.ui.clearBusy(_$modal);
             });
-            */
+            
         };
 
         //handle clicking the save button
