@@ -96,106 +96,6 @@
     </div>
 </div>
 
-
-<!-- 
-    create a work order model
-    -currently making this a partial view, should be easier that way
--->
-@*
-<div class="modal fade" id="WorkOrderCreateModal" tabindex="-1" role="dialog" aria-labelledby="WorkOrderCreateModalLabel" data-backdrop="static">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h4 class="modal-title">
-                    <span>Add A Work Order</span>
-                </h4>
-            </div>
-            <div class="modal-body">
-                <form name="roleCreateForm" role="form" novalidate class="form-validation">
-                    <!-- customer number - should come from the pages model-->
-                    <div class="row clearfix">
-                        <div class="col-sm-12">
-                            <div class="form-group form-float">
-                                <div class="form-line">
-                                    <input id="customerid" type="text" name="Name" required maxlength="32" minlength="2" class="validate form-control">
-                                    <label for="customerid" class="form-label">Customer Id</label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- first name -->
-                    <div class="row clearfix">
-                        <div class="col-sm-12">
-                            <div class="form-group form-float">
-                                <div class="form-line">
-                                    <input id="lastNameValue" type="text" name="DisplayName" required maxlength="32" minlength="2" class="validate form-control">
-                                    <label for="lastNameValue" class="form-label">Last Name</label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- last name -->
-                    <div class="row clearfix">
-                        <div class="col-sm-12">
-                            <div class="form-group form-float">
-                                <div class="form-line">
-                                    <input id=""
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- assigned service tech -->
-                    <div class="row clearfix">
-                        <div class="col-sm-12">
-                            <div class="form-group form-float">
-                                <div class="form-line">
-                                    <input id="addressValue" type="text" name="Address" required maxlength="32" minlength="2" class="validate form-control">
-                                    <label for="addressValue" class="form-label">Address</label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- dont need these to create work orders -->
-                    <div class="row clearfix">
-                        <div class="col-sm-12">
-                            <div class="form-group form-float">
-                                <div class="form-line">
-                                    <input id="phoneNumberValue" type="tel" name="PhoneNumber" required maxlength="32" minlength="2" class="validate form-control">
-                                    <label for="phoneNumberValue" class="form-label">Phone Number</label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row clearfix">
-                        <div class="col-sm-12">
-                            <div class="form-group form-float">
-                                <div class="form-line">
-                                    <input id="emailAddressValue" type="email" name="EmailAddress" required maxlength="32" minlength="2" class="validate form-control">
-                                    <label for="emailAddressValue" class="form-label">Email Address</label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="row clearfix">
-                        <div class="col-sm-12">
-                        </div>
-                    </div>
-                    <!-- create modal submit button-->
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">Cancel</button>
-                        <button type="submit" class="btn btn-primary waves-effect">Save</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-</div>
-*@
-
 <!-- makes it pop up a modal-->
 <div class="modal fade" id="RoleEditModal" tabindex="-1" role="dialog" aria-labelledby="RoleEditModalLabel" data-backdrop="static">
     <div class="modal-dialog" role="document">
@@ -206,93 +106,21 @@
     </div>
 </div>
 
+<!-- space for the 'add a work order' modal-->
+<div class="modal fade" id="AddWorkOrderModal" tabindex="-1" role="dialog" aria-labelledby="AddWorkOrderModalLabel" data-backdrop="static">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
 
-
-
-
-
-
-
-
-
-@*
-<h2>Details</h2>
-
-<div>
-    <h4>Customer</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.FirstName)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.FirstName)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.LastName)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.LastName)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.Address)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Address)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.PhoneNumber)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.PhoneNumber)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.EmailAddress)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.EmailAddress)
-        </dd>
-    </dl>
-    <!-- need to style this header -->
-    <h1>Work Orders</h1>
-    <table class="table">
-        <tr>
-            <th>Work Order ID</th>
-            <th>Assigned Service Tech</th>
-        </tr>
-        @{ int NumWorkOrders = 0; }
-        @foreach(var item in Model.CU_WorkOrders)
-        {
-            <tr>
-                <td>
-                    @Html.DisplayFor( modelItem => item.WorkOrderID)
-                </td>
-                <td>
-                    @Html.DisplayFor( modelItem => item.WO_ServiceTech.FirstName)
-                    @Html.DisplayFor( modelItem => item.WO_ServiceTech.LastName)
-                </td>
-                <td>
-                    <a asp-controller="WordOrders" asp-action="Details" asp-route-id="@item.WorkOrderID">Details</a> |
-                    <a asp-controller="WorkOrders" asp-action="Edit" asp-route-id="@item.WorkOrderID">Edit</a>
-                </td>
-            </tr>
-            NumWorkOrders++;
-        }
-
-        <tr>
-            <td>
-
-            </td>
-            <td>
-
-            </td>
-            <td>Num Work Orders: @NumWorkOrders</td>
-        </tr>            
-    </table>
-    
+        </div>
+    </div>
 </div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model.CustomerID">Edit</a> |
-    <a asp-action="Index">Back to List</a>
-</div>
-*@
+
+
+
+
+
+
+
+
+
+
