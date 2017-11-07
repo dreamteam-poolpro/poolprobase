@@ -1,6 +1,7 @@
 ﻿(function () {
     $(function () {
         console.log("details.js loaded");
+
         var _roleService = abp.services.app.workOrder;
         var _$modal = $('#AddLineItemModal');
         var _$form = $('form[name=AddLineItemForm]');
@@ -25,6 +26,7 @@
                 contentType: 'application/html',
                 success: function(content) {
                     $('#AddLineItemModal div.modal-content').html(content);
+                    console.log("ajax call was successful");
                 },
                 error: function (e) { }
             });

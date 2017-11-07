@@ -4,6 +4,14 @@
     ViewBag.CurrentPageName = PageNames.CustomersDetails; //The menu item will be active for this page.
     ViewData["Title"] = "Customers - Details";
 }
+@section scripts{
+    <environment names="Development">
+        <script src="~/view-resources/Views/Customers/Details.js" asp-append-version="true"></script>
+    </environment>
+    <environment names="Staging,Production">
+        <script src="~/view-resources/Views/Customers/Details.js" asp-append-version="true"></script>
+    </environment>
+}
 
 <div class="row clearfix">
     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -87,8 +95,8 @@
                         </tr>
                     }
                 </table>
-                <!-- link to work order create modal-->
-                <button type="button" class="btn btn-primary btn-circle waves-effect waves-circle waves-float pull-right" data-toggle="modal" data-target="#WorkOrderCreateModal">
+                <!-- add a work order button-->
+                <button type="button" class="btn btn-primary btn-circle waves-effect waves-circle waves-float pull-right add-workorder" data-toggle="modal" data-target="#AddWorkOrderModal" data-customer-id="@Model.CustomerID">
                     <i class="material-icons">add</i>
                 </button>
             </div>
@@ -96,21 +104,24 @@
     </div>
 </div>
 
+@*
 <!-- makes it pop up a modal-->
-<div class="modal fade" id="RoleEditModal" tabindex="-1" role="dialog" aria-labelledby="RoleEditModalLabel" data-backdrop="static">
+<div class="modal fade" id="AddLineItemModal" tabindex="-1" role="dialog" aria-labelledby="AddLineItemModalLabel" data-backdrop="static">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+
+        </div>
+    </div>
+</div>
+*@
+
+<!-- space for the 'add a work order' modal-->
+<!-- makes it pop up a modal-->
+<div class="modal fade" id="AddWorkOrderModal" tabindex="-1" role="dialog" aria-labelledby="AddWorkOrderModalLabel" data-backdrop="static">
     <div class="modal-dialog" role="document">
         <!-- class type tells is to load the partial view as a modal -->
         <div class="modal-content">
             <!-- the partial view _awoifjqwero loads here-->
-        </div>
-    </div>
-</div>
-
-<!-- space for the 'add a work order' modal-->
-<div class="modal fade" id="AddWorkOrderModal" tabindex="-1" role="dialog" aria-labelledby="AddWorkOrderModalLabel" data-backdrop="static">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-
         </div>
     </div>
 </div>

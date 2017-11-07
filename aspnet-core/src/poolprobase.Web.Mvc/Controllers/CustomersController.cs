@@ -1,16 +1,16 @@
-﻿using System.Linq;
-using System.Threading.Tasks;
+﻿using Abp.AspNetCore.Mvc.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using poolprobase.Authorization;
+using poolprobase.Controllers;
 using poolprobase.Web.Data;
 using poolprobase.Web.Models.Customer;
-using poolprobase.Controllers;
-using Abp.AspNetCore.Mvc.Authorization;
-using poolprobase.Authorization;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace poolprobase.Web.Mvc.Controllers
 {
-    [AbpMvcAuthorize(PermissionNames.Pages_Customers)]
+    //[AbpMvcAuthorize(PermissionNames.Pages_Customers)]
     public class CustomersController : poolprobaseControllerBase
     {
         private readonly CustomerContext _context;
@@ -159,5 +159,18 @@ namespace poolprobase.Web.Mvc.Controllers
             }
             return View("_EditCustomersModal", customer);
         }
+
+        //the modal / popup for adding a work order to a customer
+        public async Task<ActionResult> AddWorkOrderModal(int id)
+        {
+            var customer = await _context.Customers.SingleOrDefaultAsync(m => m.CustomerID == id);
+            if(customer == null)
+            {
+                return NotFound();
+            }
+            return View("_AddWorkOrderModal", customer);
+        }
+        
+        //need to write the action to actually add the work order to the customer
     }
 }

@@ -4,8 +4,39 @@
 @{ 
     Layout = null;
 }
-@Html.Partial("~/Views/Shared/Modals/_ModalHeader.cshtml", new ModalHeaderViewModel("Add A Work Order"))
+@section scripts{ 
+    <environment names="Development">
+        <script src="~/view-resources/Views/Customers/_AddWorkOrderModal.js" asp-append-version="true"></script>
+    </environment>
+    <environment names="Staging,Production">
+        <script src="~/view-resources/Views/Customers/_AddWorkOrderModal.js" asp-append-version="true"></script>
+    </environment>
+}
+
+@Html.Partial("~/Views/Shared/Modals/_Modalheader.cshtml", new ModalHeaderViewModel("Add Work Order"))
 
 <div class="modal-body">
+    <form name="AddWorkOrderForm" role="form" nonvalidate class="form-validation">
+        <!-- customer id for save function -->
+        <input id="customeridinput" type="hidden" value="@Model.CustomerID" />
 
+        <!-- Assigned Service Tech -->
+        <div class="row clearfix">
+            <div class="col-sm-12">
+                <div class="form-group form-float">
+                    <div class="form-line">
+                        <!-- needs to be a dropdown/select element-->
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--  -->
+
+    </form>
 </div>
+
+<!-- save and cancel button -->
+@Html.Partial("~/Views/Shared/Modals/_ModalFooterWithSaveAndCancel.cshtml")
+

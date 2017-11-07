@@ -1,19 +1,16 @@
-﻿
-@using poolprobase.Web.Startup
-
+﻿@using poolprobase.Web.Startup
 @model poolprobase.Web.Models.Customer.WorkOrder
-
 @{
     ViewBag.CurrentPageName = PageNames.WorkOrderDetails;
     ViewData["Title"] = "Work Order - Details";
 }
 @section scripts{ 
-<environment names="Development">
-    <script src="~/view-resources/Views/WorkOrders/details.js" asp-append-version="true"></script>
-</environment>
-<environment names="Staging,Production">
-    <script src="~/view-resources/Views/WorkOrders/details.js" asp-append-version="true"></script>
-</environment>
+    <environment names="Development">
+        <script src="~/view-resources/Views/WorkOrders/details.js" asp-append-version="true"></script>
+    </environment>
+    <environment names="Staging,Production">
+        <script src="~/view-resources/Views/WorkOrders/details.js" asp-append-version="true"></script>
+    </environment>
 }
 <!-- creates a 'card' section -->
 <div class="row clearfix">
@@ -126,6 +123,8 @@
         </div>
     </div>
  </div>
+
+<!-- space for the add a line item modal-->
 <!-- makes it pop up a modal-->
 <div class="modal fade" id="AddLineItemModal" tabindex="-1" role="dialog" aria-labelledby="AddLineItemModalLabel" data-backdrop="static">
     <div class="modal-dialog" role="document">

@@ -29,11 +29,8 @@
         $('.edit-role').click(function (e) {
             console.log("Somebody clicked the save button");
             var id = $(this).attr("data-role-id");
-
             e.preventDefault();
-
             $.ajax({
-                //                 controller/action
                 url: abp.appPath + 'Customers/EditCustomersModal?id=' + id,
 				type: 'POST',
 				contentType: 'application/html',
@@ -42,7 +39,6 @@
 				},
 				error: function (e) { }
 			});
-            //$.POST('/ServiceTechs/EditTechsModal?id=' + id);
 		});
 
 
